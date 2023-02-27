@@ -1,7 +1,6 @@
 import Link from "next/link";
 import React from "react";
 import DarkMode from "./darkMode";
-import Logo from "./logo";
 
 function Navbar() {
   return (
