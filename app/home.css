@@ -1,0 +1,6 @@
+.bg-space {
+  background-image: url(../public/space.gif);
+
+  background-repeat: no-repeat;
+  background-position: top;
+}
