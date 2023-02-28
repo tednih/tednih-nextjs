@@ -5,7 +5,7 @@ import "../app/home.css";
 export default function Home() {
   return (
     <>
-      <div className=" bg-space lg:max-w-[1440px] h-auto m-auto bg-gray-50 dark:bg-zinc-900 ">
+      <div className=" bg-space lg:max-w-[1440px] h-auto m-auto bg-zinc-100 dark:bg-zinc-900 ">
         <Navbar />
 
         <section>

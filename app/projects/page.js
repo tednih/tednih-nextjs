@@ -1,18 +1,19 @@
-import Link from "next/link";
+"use client";
+
 import React from "react";
+import BreadCrumb from "../components/breadCrumb";
+import Footer from "../components/footer";
+import Navbar from "../components/navbar";
+import CardProjects from "./cardProjects";
 
 const Projects = () => {
   return (
-    <div>
+    <div className="bg-zinc-100 dark:bg-zinc-900 lg:max-w-[1440px] m-auto">
+      <Navbar />
+      <BreadCrumb />
       <p>Halaman Project</p>
-      <p>
-        <Link
-          className="relative font-medium text-gray-500 before:absolute before:-bottom-1 before:h-0.5 before:w-full before:scale-x-0 before:bg-indigo-600 before:transition hover:before:scale-x-100"
-          href="/"
-        >
-          Home
-        </Link>
-      </p>
+      <CardProjects />
+      <Footer />
     </div>
   );
 };
