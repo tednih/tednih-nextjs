@@ -1,11 +1,10 @@
 import React from "react";
 import { Projects } from "./dataProjects";
 import Image from "next/image";
-
 const CardProjects = () => {
   return (
     <>
-      <div className="bg-zinc-200 dark:bg-zinc-800 lg:max-w-[800px] md:max-w-[600px] max-w-[430px] m-auto rounded-xl items-center backdrop-blur-md grid lg:grid-cols-2 gap-4 p-10">
+      <div className="bg-zinc-200 dark:bg-zinc-800 lg:max-w-[800px] md:max-w-[600px] max-w-[430px] m-auto rounded-xl items-center backdrop-blur-md grid lg:grid-cols-2 gap-4 p-10 my-4">
         {Projects.map((project) => {
           return (
             <article
@@ -19,7 +18,7 @@ const CardProjects = () => {
                   className="h-56 w-full object-cover mb-2"
                 />
                 <time
-                  datetime={project.tanggal}
+                  dateTime={project.tanggal}
                   className="block text-xs text-gray-500 dark:text-gray-400"
                 >
                   {project.tanggal}
@@ -30,15 +29,28 @@ const CardProjects = () => {
                     {project.judul}
                   </h3>
                 </a>
-
                 <div className="mt-4 flex flex-wrap gap-1">
-                  <span className="cursor-pointer whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-xs text-violet-600 dark:bg-violet-600 dark:text-violet-100">
-                    Snippet
-                  </span>
+                  {project.bahasa.map((bhsa) => {
+                    return (
+                      <span
+                        className="cursor-pointer whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-xs text-violet-600 dark:bg-violet-600 dark:text-violet-100"
+                        key={project.id}
+                      >
+                        {bhsa}
+                      </span>
+                    );
+                  })}
 
-                  <span className="cursor-pointer whitespace-nowrap rounded-full bg-violet-100 px-2.5 py-0.5 text-xs text-violet-600 dark:bg-violet-600 dark:text-violet-100">
-                    JavaScript
-                  </span>
+                  {project.tools.map((tool) => {
+                    return (
+                      <span
+                        className="cursor-pointer whitespace-nowrap rounded-full bg-violet-100 px-2.5 py-0.5 text-xs text-violet-600 dark:bg-violet-600 dark:text-violet-100"
+                        key={project.id}
+                      >
+                        {tool}
+                      </span>
+                    );
+                  })}
                 </div>
               </div>
             </article>

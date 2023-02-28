@@ -11,9 +11,11 @@ export default function Home() {
         <section>
           <div className="p-8 md:p-12 lg:px-16 lg:py-24 hover:cursor-default">
             <div className="mx-auto max-w-lg text-center mt-20">
-              <h2 className="text-2xl text-gray-500 dark:text-gray-50 font-bold md:text-3xl">
+              <h2 className="text-2xl text-gray-900 dark:text-white font-bold md:text-3xl">
                 Hello, I'm Dhimas{" "}
-                <span className=" border-b-2 border-violet-600">Ted</span>
+                <span className="inset-1 hover:-inset-0 hover:bg-transparent bg-violet-600 relative">
+                  Ted
+                </span>
                 dy S
               </h2>
 
