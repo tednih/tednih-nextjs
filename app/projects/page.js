@@ -5,7 +5,6 @@ import BreadCrumb from "../components/breadCrumb";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 import CardProjects from "./cardProjects";
-// import FilterLabel from "./filterLabel";
 
 const Projects = () => {
   return (
@@ -13,7 +12,6 @@ const Projects = () => {
       <Navbar />
       <BreadCrumb />
 
-      {/* <FilterLabel /> */}
       <CardProjects />
       <Footer />
     </div>
