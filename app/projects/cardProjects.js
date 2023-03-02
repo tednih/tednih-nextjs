@@ -57,14 +57,14 @@ const CardProjects = () => {
                 </div>
 
                 <span
-                  className=" cursor-pointer flex  bg-violet-200 text-xs text-violet-600 dark:bg-violet-600 dark:text-violet-100 hover:bg-violet-300 hover:dark:bg-violet-500 rounded-r-full"
+                  className=" cursor-pointer flex bg-violet-200 text-xs text-violet-600 dark:bg-violet-600 dark:text-violet-100 hover:bg-violet-300 hover:dark:bg-violet-500 rounded-r-full"
                   onClick={() => {
                     const newRole = [...selectedTool];
                     newRole.splice(index, 1);
                     setSelectedTool(newRole);
                   }}
                 >
-                  <XCircleIcon className="h-4 w-full" />
+                  <XCircleIcon className="h-4 w-4" />
                 </span>
               </ol>
             ))}
@@ -111,7 +111,7 @@ const CardProjects = () => {
                   {project.bahasa.map((bhsa) => {
                     return (
                       <span
-                        className="cursor-pointer whitespace-nowrap rounded-full bg-violet-200 px-2.5 py-0.5 text-xs text-violet-600 dark:bg-violet-600 dark:text-violet-100"
+                        className="cursor-pointer whitespace-nowrap rounded-full bg-violet-200 px-2.5 py-0.5 text-xs text-violet-600 dark:bg-violet-600 dark:text-violet-100 hover:bg-violet-300 hover:dark:bg-violet-500"
                         key={project.id}
                         onClick={() =>
                           setSelectedBahasa([...selectedBahasa, bhsa])
@@ -125,7 +125,7 @@ const CardProjects = () => {
                   {project.tools.map((tool) => {
                     return (
                       <span
-                        className="cursor-pointer whitespace-nowrap rounded-full bg-violet-200 px-2.5 py-0.5 text-xs text-violet-600 dark:bg-violet-600 dark:text-violet-100"
+                        className="cursor-pointer whitespace-nowrap rounded-full bg-violet-200 px-2.5 py-0.5 text-xs text-violet-600 dark:bg-violet-600 dark:text-violet-100 hover:bg-violet-300 hover:dark:bg-violet-500"
                         key={project.id}
                         onClick={() => setSelectedTool([...selectedTool, tool])}
                       >

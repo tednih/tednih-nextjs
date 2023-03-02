@@ -2,6 +2,10 @@ import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import "../app/home.css";
 
+export const metadata = {
+  title: "Home | Tednih",
+};
+
 export default function Home() {
   return (
     <>
