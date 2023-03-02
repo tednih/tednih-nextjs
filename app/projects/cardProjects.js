@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Projects } from "./dataProjects";
 import Image from "next/image";
 import { XCircleIcon } from "@heroicons/react/solid";
+import Link from "next/link";
 
 const CardProjects = () => {
   const [selectedBahasa, setSelectedBahasa] = useState([]);
@@ -103,9 +104,12 @@ const CardProjects = () => {
                 </time>
 
                 <span>
-                  <h3 className="mt-0.5 text-lg font-medium text-gray-900 dark:text-white">
+                  <Link
+                    href={"/projects/" + project.id}
+                    className="mt-0.5 text-lg font-medium text-gray-900 dark:text-white"
+                  >
                     {project.judul}
-                  </h3>
+                  </Link>
                 </span>
                 <div className="mt-4 flex flex-wrap gap-1">
                   {project.bahasa.map((bhsa) => {
