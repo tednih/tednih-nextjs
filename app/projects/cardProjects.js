@@ -45,7 +45,7 @@ const CardProjects = () => {
                     setSelectedBahasa(newRole);
                   }}
                 >
-                  <XCircleIcon className="h-4 w-full" />
+                  <XCircleIcon className="h-4 w-4" />
                 </span>
               </ol>
             ))}
