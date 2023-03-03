@@ -1,4 +1,5 @@
 import { Projects } from "../dataProjects";
+import React from "react";
 
 export async function getStaticPaths() {
   const paths = Projects.map((project) => ({
@@ -16,14 +17,13 @@ export async function getStaticProps({ params }) {
   };
 }
 
-function ProjectDetail({ params }) {
-  {
-    return (
-      <>
-        <b>detail PROJECT {params.id}</b>
-      </>
-    );
-  }
-}
+const DetailProject = ({ params }) => {
+  return (
+    <div>
+      <b>detail PROJECT {params.id}</b>
+      <p>{params.judul}</p>
+    </div>
+  );
+};
 
-export default ProjectDetail;
+export default DetailProject;
