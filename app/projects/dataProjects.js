@@ -1,6 +1,6 @@
-import Foto1 from "./img/luxspace.png";
-import Foto2 from "./img/portfolio1.png";
-import Foto3 from "./img/portfolio2.jpg";
+import Foto1 from "../../public/luxspace.png";
+import Foto2 from "../../public/portfolio1.png";
+import Foto3 from "../../public/portfolio2.jpg";
 
 const Projects = [
   {

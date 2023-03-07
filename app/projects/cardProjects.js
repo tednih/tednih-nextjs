@@ -105,8 +105,8 @@ const CardProjects = () => {
 
                 <span>
                   <Link
-                    href={"/projects/" + project.id}
-                    className="mt-0.5 text-lg font-medium text-gray-900 dark:text-white"
+                    href={`/projects/${project.id}`}
+                    className="mt-0.5 text-lg font-medium text-gray-900 dark:text-white hover:underline"
                   >
                     {project.judul}
                   </Link>
@@ -116,7 +116,7 @@ const CardProjects = () => {
                     return (
                       <span
                         className="cursor-pointer whitespace-nowrap rounded-full bg-violet-200 px-2.5 py-0.5 text-xs text-violet-600 dark:bg-violet-600 dark:text-violet-100 hover:bg-violet-300 hover:dark:bg-violet-500"
-                        key={project.id}
+                        key={bhsa}
                         onClick={() =>
                           setSelectedBahasa([...selectedBahasa, bhsa])
                         }
@@ -130,7 +130,7 @@ const CardProjects = () => {
                     return (
                       <span
                         className="cursor-pointer whitespace-nowrap rounded-full bg-violet-200 px-2.5 py-0.5 text-xs text-violet-600 dark:bg-violet-600 dark:text-violet-100 hover:bg-violet-300 hover:dark:bg-violet-500"
-                        key={project.id}
+                        key={tool}
                         onClick={() => setSelectedTool([...selectedTool, tool])}
                       >
                         {tool}
