@@ -1,6 +1,7 @@
-.bg-space {
-  background-image: url(../public/space.gif);
-
+.bg-comp {
+  background-image: url(../public/computer.png);
+  background-size: cover;
+  width: 100%;
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: center;
 }

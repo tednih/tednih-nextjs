@@ -16,7 +16,7 @@ const DetailProjects = ({ params }) => {
   return (
     <div>
       <Navbar />
-      <section className="lg:max-w-[1440px] m-auto overflow-hidden bg-zinc-100 dark:bg-zinc-900 sm:grid sm:grid-cols-2 sm:items-center">
+      <section className="lg:max-w-[1440px] m-auto overflow-hidden bg-zinc-100 dark:bg-zinc-900 lg:grid lg:grid-cols-2 lg:items-center lg:py-16">
         <div className="p-8 md:p-12 lg:px-16 lg:py-14">
           <div className="mx-auto max-w-xl text-center sm:text-left">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white md:text-3xl">
@@ -32,7 +32,7 @@ const DetailProjects = ({ params }) => {
         <Image
           alt=""
           src={detail.foto}
-          className="h-full w-full object-fit rounded-md"
+          className="lg:h-full lg:w-full h-[300px] w-[600px] m-auto object-fit items-center rounded-md"
         />
       </section>
       <Footer />

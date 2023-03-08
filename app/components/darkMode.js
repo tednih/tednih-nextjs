@@ -20,7 +20,7 @@ const DarkMode = () => {
     if (currentTheme === "dark") {
       return (
         <SunIcon
-          className="w-7 h-7"
+          className="w-5 h-5"
           role="button"
           onClick={() => setTheme("light")}
         />
@@ -28,7 +28,7 @@ const DarkMode = () => {
     } else {
       return (
         <MoonIcon
-          className="w-7 h-7"
+          className="w-5 h-5"
           role="button"
           onClick={() => setTheme("dark")}
         />
