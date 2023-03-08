@@ -1,9 +1,16 @@
+"use client";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import DarkMode from "./darkMode";
-import { ViewListIcon } from "@heroicons/react/solid";
+import { MenuIcon, XIcon } from "@heroicons/react/solid";
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <header
       aria-label="Site Header"
@@ -43,15 +50,56 @@ function Navbar() {
             <DarkMode />
           </div>
 
-          <div class="lg:hidden md:hidden">
-            <button
-              class="rounded-lg bg-gray-100 p-2 text-gray-600"
-              type="button"
-            >
-              <span class="sr-only">Open menu</span>
-              <ViewListIcon className="w-5 h-5" />
-            </button>
-          </div>
+          <button
+            className="block md:hidden dark:text-white text-gray-700 focus:outline-none"
+            onClick={toggleMenu}
+          >
+            {isOpen ? (
+              <XIcon className="h-6 w-6" aria-hidden="true" />
+            ) : (
+              <MenuIcon className="h-6 w-6" aria-hidden="true" />
+            )}
+          </button>
+          {isOpen && (
+            <div className="absolute top-12 left-0 w-full h-full z-50">
+              <div className="p-8 text-gray-700">
+                <ul>
+                  <li>
+                    <Link
+                      class="text-gray-700 dark:text-gray-100 relative font-medium before:absolute before:-bottom-1 before:h-0.5 before:w-full before:origin-right before:scale-x-0 before:bg-zinc-900 dark:before:bg-zinc-100 before:transition hover:before:scale-100"
+                      href="/"
+                    >
+                      Home
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      class="text-gray-700 dark:text-gray-100 relative font-medium before:absolute before:-bottom-1 before:h-0.5 before:w-full before:origin-right before:scale-x-0 before:bg-zinc-900 dark:before:bg-zinc-100 before:transition hover:before:scale-100"
+                      href="/projects"
+                    >
+                      Projects
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      class="text-gray-700 dark:text-gray-100 relative font-medium before:absolute before:-bottom-1 before:h-0.5 before:w-full before:origin-right before:scale-x-0 before:bg-zinc-900 dark:before:bg-zinc-100 before:transition hover:before:scale-100"
+                      href="/"
+                    >
+                      About
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      class="text-gray-700 dark:text-gray-100 relative font-medium before:absolute before:-bottom-1 before:h-0.5 before:w-full before:origin-right before:scale-x-0 before:bg-zinc-900 dark:before:bg-zinc-100 before:transition hover:before:scale-100"
+                      href="/"
+                    >
+                      Blog
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </header>
