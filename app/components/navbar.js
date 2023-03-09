@@ -47,50 +47,46 @@ function Navbar() {
     };
   }, []);
 
-  const navClasses = `top-0 w-full ${
-    isScrolled
-      ? "fixed bg-zinc-200 dark:bg-zinc-800"
-      : "bg-zinc-100 dark:bg-zinc-900"
-  }`;
+  const navClasses = `top-0 w-full ${isScrolled ? "fixed" : ""}`;
 
   // End Fixed Nav When Scroll
 
   return (
     <header
       aria-label="Site Header"
-      className={`lg:max-w-[1440px] m-auto bg-blend-saturation z-10 ${navClasses}`}
+      className={`lg:max-w-[1440px] m-auto bg-blend-saturation z-10 bg-zinc-100 dark:bg-zinc-900 ${navClasses}`}
     >
-      <div class="mx-auto max-w-screen-xl p-4 ">
-        <div class="flex items-center justify-between gap-4 lg:gap-10">
-          <div class="flex lg:w-0 lg:flex-1 font-righteous">
+      <div className="mx-auto max-w-screen-xl p-4 ">
+        <div className="flex items-center justify-between gap-4 lg:gap-10">
+          <div className="flex lg:w-0 lg:flex-1 font-righteous">
             <Link href="/">Tednih.</Link>
           </div>
 
           <nav
             aria-label="Site Nav"
-            class="hidden gap-8 text-sm font-medium md:flex"
+            className="hidden gap-8 text-sm font-medium md:flex"
           >
             <Link
-              class="text-gray-700 dark:text-gray-100 relative font-medium before:absolute before:-bottom-1 before:h-0.5 before:w-full before:origin-right before:scale-x-0 before:bg-zinc-900 dark:before:bg-zinc-100 before:transition hover:before:scale-100"
+              className="text-gray-700 dark:text-gray-100 relative font-medium before:absolute before:-bottom-1 before:h-0.5 before:w-full before:origin-right before:scale-x-0 before:bg-zinc-900 dark:before:bg-zinc-100 before:transition hover:before:scale-100"
               href="/projects"
             >
               Projects
             </Link>
             <Link
-              class="text-gray-700 dark:text-gray-100 relative font-medium before:absolute before:-bottom-1 before:h-0.5 before:w-full before:origin-right before:scale-x-0 before:bg-zinc-900 dark:before:bg-zinc-100 before:transition hover:before:scale-100"
+              className="text-gray-700 dark:text-gray-100 relative font-medium before:absolute before:-bottom-1 before:h-0.5 before:w-full before:origin-right before:scale-x-0 before:bg-zinc-900 dark:before:bg-zinc-100 before:transition hover:before:scale-100"
               href="/projects"
             >
               About
             </Link>
             <Link
-              class="text-gray-700 dark:text-gray-100 relative font-medium before:absolute before:-bottom-1 before:h-0.5 before:w-full before:origin-right before:scale-x-0 before:bg-zinc-900 dark:before:bg-zinc-100 before:transition hover:before:scale-100"
+              className="text-gray-700 dark:text-gray-100 relative font-medium before:absolute before:-bottom-1 before:h-0.5 before:w-full before:origin-right before:scale-x-0 before:bg-zinc-900 dark:before:bg-zinc-100 before:transition hover:before:scale-100"
               href="/projects"
             >
               Blog
             </Link>
           </nav>
 
-          <div class="flex-1 items-center justify-end gap-4 flex animate-bounce">
+          <div className="flex-1 items-center justify-end gap-4 flex animate-bounce">
             <DarkMode />
           </div>
 
@@ -113,7 +109,7 @@ function Navbar() {
                   <ul className="text-center mt-8">
                     <li className="mb-8">
                       <Link
-                        class="text-gray-700 dark:text-gray-100 relative font-medium before:absolute before:-bottom-1 before:h-0.5 before:w-full before:origin-right before:scale-x-0 before:bg-zinc-900 dark:before:bg-zinc-100 before:transition hover:before:scale-100"
+                        className="text-gray-700 dark:text-gray-100 relative font-medium before:absolute before:-bottom-1 before:h-0.5 before:w-full before:origin-right before:scale-x-0 before:bg-zinc-900 dark:before:bg-zinc-100 before:transition hover:before:scale-100"
                         href="/"
                       >
                         Home
@@ -121,7 +117,7 @@ function Navbar() {
                     </li>
                     <li className="mb-8">
                       <Link
-                        class="text-gray-700 dark:text-gray-100 relative font-medium before:absolute before:-bottom-1 before:h-0.5 before:w-full before:origin-right before:scale-x-0 before:bg-zinc-900 dark:before:bg-zinc-100 before:transition hover:before:scale-100"
+                        className="text-gray-700 dark:text-gray-100 relative font-medium before:absolute before:-bottom-1 before:h-0.5 before:w-full before:origin-right before:scale-x-0 before:bg-zinc-900 dark:before:bg-zinc-100 before:transition hover:before:scale-100"
                         href="/projects"
                       >
                         Projects
@@ -129,7 +125,7 @@ function Navbar() {
                     </li>
                     <li className="mb-8">
                       <Link
-                        class="text-gray-700 dark:text-gray-100 relative font-medium before:absolute before:-bottom-1 before:h-0.5 before:w-full before:origin-right before:scale-x-0 before:bg-zinc-900 dark:before:bg-zinc-100 before:transition hover:before:scale-100"
+                        className="text-gray-700 dark:text-gray-100 relative font-medium before:absolute before:-bottom-1 before:h-0.5 before:w-full before:origin-right before:scale-x-0 before:bg-zinc-900 dark:before:bg-zinc-100 before:transition hover:before:scale-100"
                         href="/"
                       >
                         About
@@ -137,7 +133,7 @@ function Navbar() {
                     </li>
                     <li className="mb-8">
                       <Link
-                        class="text-gray-700 dark:text-gray-100 relative font-medium before:absolute before:-bottom-1 before:h-0.5 before:w-full before:origin-right before:scale-x-0 before:bg-zinc-900 dark:before:bg-zinc-100 before:transition hover:before:scale-100"
+                        className="text-gray-700 dark:text-gray-100 relative font-medium before:absolute before:-bottom-1 before:h-0.5 before:w-full before:origin-right before:scale-x-0 before:bg-zinc-900 dark:before:bg-zinc-100 before:transition hover:before:scale-100"
                         href="/"
                       >
                         Blog
@@ -151,42 +147,42 @@ function Navbar() {
                   <div className="text-center top-0 flex-col gap-2">
                     <p className="font-righteous mb-10">Tednih.</p>
                     <Link
-                      class="mb-2 inline-flex items-center gap-2 rounded bg-[#171515] dark:bg-white px-5 py-3 text-sm font-medium text-white dark:text-[#171515] hover:bg-[#353232] dark:hover:bg-zinc-300"
+                      className="mb-2 inline-flex items-center gap-2 rounded bg-[#171515] dark:bg-white px-5 py-3 text-sm font-medium text-white dark:text-[#171515] hover:bg-[#353232] dark:hover:bg-zinc-300"
                       href="https://github.com/tednih"
                       target="_blank"
                       rel="noreferrer"
                     >
                       GitHub
                       <svg
-                        class="h-5 w-5"
+                        className="h-5 w-5"
                         fill="currentColor"
                         viewBox="0 0 24 24"
                         aria-hidden="true"
                       >
                         <path
-                          fill-rule="evenodd"
+                          fillRule="evenodd"
                           d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                          clip-rule="evenodd"
+                          clipRule="evenodd"
                         ></path>
                       </svg>
                     </Link>
                     <Link
-                      class="mb-2 inline-flex items-center gap-2 rounded bg-[#171515] dark:bg-white px-5 py-3 text-sm font-medium text-white dark:text-[#171515] hover:bg-[#353232] dark:hover:bg-zinc-300"
+                      className="mb-2 inline-flex items-center gap-2 rounded bg-[#171515] dark:bg-white px-5 py-3 text-sm font-medium text-white dark:text-[#171515] hover:bg-[#353232] dark:hover:bg-zinc-300"
                       href="https://www.instagram.com/dteds_/"
                       target="_blank"
                       rel="noreferrer"
                     >
                       Instagram
                       <svg
-                        class="h-5 w-5"
+                        className="h-5 w-5"
                         fill="currentColor"
                         viewBox="0 0 24 24"
                         aria-hidden="true"
                       >
                         <path
-                          fill-rule="evenodd"
+                          fillRule="evenodd"
                           d="M16.98 0a6.9 6.9 0 0 1 5.08 1.98A6.94 6.94 0 0 1 24 7.02v9.96c0 2.08-.68 3.87-1.98 5.13A7.14 7.14 0 0 1 16.94 24H7.06a7.06 7.06 0 0 1-5.03-1.89A6.96 6.96 0 0 1 0 16.94V7.02C0 2.8 2.8 0 7.02 0h9.96zm.05 2.23H7.06c-1.45 0-2.7.43-3.53 1.25a4.82 4.82 0 0 0-1.3 3.54v9.92c0 1.5.43 2.7 1.3 3.58a5 5 0 0 0 3.53 1.25h9.88a5 5 0 0 0 3.53-1.25 4.73 4.73 0 0 0 1.4-3.54V7.02a5 5 0 0 0-1.3-3.49 4.82 4.82 0 0 0-3.54-1.3zM12 5.76c3.39 0 6.2 2.8 6.2 6.2a6.2 6.2 0 0 1-12.4 0 6.2 6.2 0 0 1 6.2-6.2zm0 2.22a3.99 3.99 0 0 0-3.97 3.97A3.99 3.99 0 0 0 12 15.92a3.99 3.99 0 0 0 3.97-3.97A3.99 3.99 0 0 0 12 7.98zm6.44-3.77a1.4 1.4 0 1 1 0 2.8 1.4 1.4 0 0 1 0-2.8z"
-                          clip-rule="evenodd"
+                          clipRule="evenodd"
                         />
                       </svg>
                     </Link>
