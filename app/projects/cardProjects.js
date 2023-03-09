@@ -83,7 +83,7 @@ const CardProjects = () => {
       </div>
 
       {/* End Filter */}
-      <div className="bg-zinc-200 dark:bg-zinc-800 lg:max-w-[800px] md:max-w-[600px] max-w-[430px] m-auto rounded-xl items-center backdrop-blur-md grid lg:grid-cols-2 gap-4 p-10 my-4">
+      <div className="bg-zinc-200 dark:bg-zinc-800 lg:max-w-[800px] md:max-w-[600px] max-w-[430px] m-auto rounded-xl items-center backdrop-blur-md grid lg:grid-cols-2 gap-4 p-10">
         {filteredProjects.map((project) => {
           return (
             <article

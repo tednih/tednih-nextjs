@@ -1,6 +1,3 @@
-import Navbar from "./components/navbar";
-import Footer from "./components/footer";
-
 export const metadata = {
   title: "Home | Tednih",
 };
@@ -8,7 +5,6 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <Navbar />
       <div className="lg:max-w-[1440px] h-auto m-auto bg-zinc-100 dark:bg-zinc-900 ">
         <section>
           <div className="p-8 md:p-12 lg:px-16 lg:py-24 hover:cursor-default">
@@ -27,7 +23,6 @@ export default function Home() {
           </div>
         </section>
       </div>
-      <Footer />
     </>
   );
 }

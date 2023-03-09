@@ -1,6 +1,5 @@
 "use client";
-import Footer from "@/app/components/footer";
-import Navbar from "@/app/components/navbar";
+
 import Image from "next/image";
 import React from "react";
 import { Projects } from "../dataProjects";
@@ -15,7 +14,6 @@ const DetailProjects = ({ params }) => {
   }
   return (
     <div>
-      <Navbar />
       <section className="lg:max-w-[1440px] m-auto overflow-hidden bg-zinc-100 dark:bg-zinc-900 lg:grid lg:grid-cols-2 lg:items-center lg:py-16">
         <div className="p-8 md:p-12 lg:px-16 lg:py-14">
           <div className="mx-auto max-w-xl text-center sm:text-left">
@@ -35,7 +33,6 @@ const DetailProjects = ({ params }) => {
           className="lg:h-full lg:w-full h-[300px] w-[600px] m-auto object-fit items-center rounded-md"
         />
       </section>
-      <Footer />
     </div>
   );
 };
