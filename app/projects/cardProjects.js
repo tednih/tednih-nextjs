@@ -25,7 +25,7 @@ const CardProjects = () => {
     <>
       {/* Filter */}
       <div
-        className={`bg-zinc-200 dark:bg-zinc-800 lg:max-w-[800px] mt-2 md:max-w-[600px] max-w-[430px] m-auto rounded-xl items-center backdrop-blur-md mb-4
+        className={`bg-zinc-200 dark:bg-zinc-800 lg:max-w-[800px] md:max-w-[600px] max-w-[430px] m-auto rounded-xl items-center backdrop-blur-md mb-4
     ${
       selectedBahasa.length === 0 && selectedTool.length === 0 ? "hidden" : ""
     }`}

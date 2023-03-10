@@ -47,14 +47,16 @@ function Navbar() {
     };
   }, []);
 
-  const navClasses = `top-0 w-full ${isScrolled ? "fixed" : ""}`;
+  const navClasses = `top-0 w-full ${
+    isScrolled ? "fixed backdrop-blur-sm z-10" : "bg-zinc-100 dark:bg-zinc-900"
+  }`;
 
   // End Fixed Nav When Scroll
 
   return (
     <header
       aria-label="Site Header"
-      className={`lg:max-w-[1440px] m-auto bg-blend-saturation z-10 bg-zinc-100 dark:bg-zinc-900 ${navClasses}`}
+      className={`${navClasses}`}
     >
       <div className="mx-auto max-w-screen-xl p-4 ">
         <div className="flex items-center justify-between gap-4 lg:gap-10">
