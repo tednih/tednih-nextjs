@@ -4,7 +4,7 @@ import CardProjects from "./cardProjects";
 
 const Projects = () => {
   return (
-    <div className="bg-zinc-100 dark:bg-zinc-900 py-10">
+    <div className="bg-zinc-100 dark:bg-zinc-900 py-10 lg:h-screen">
       <CardProjects />
     </div>
   );

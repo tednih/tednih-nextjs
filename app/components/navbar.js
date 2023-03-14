@@ -54,10 +54,7 @@ function Navbar() {
   // End Fixed Nav When Scroll
 
   return (
-    <header
-      aria-label="Site Header"
-      className={`${navClasses}`}
-    >
+    <header aria-label="Site Header" className={`${navClasses}`}>
       <div className="mx-auto max-w-screen-xl p-4 ">
         <div className="flex items-center justify-between gap-4 lg:gap-10">
           <div className="flex lg:w-0 lg:flex-1 font-righteous">
@@ -146,10 +143,10 @@ function Navbar() {
                   {/* bagian atas nav */}
                   {/* bagian tengah nav */}
 
-                  <div className="text-center top-0 flex-col gap-2">
-                    <p className="font-righteous mb-10">Tednih.</p>
+                  <div className="m-auto top-0 w-32 flex-col gap-2">
+                    <p className="font-righteous text-center mb-10">Tednih.</p>
                     <Link
-                      className="mb-2 inline-flex items-center gap-2 rounded bg-[#171515] dark:bg-white px-5 py-3 text-sm font-medium text-white dark:text-[#171515] hover:bg-[#353232] dark:hover:bg-zinc-300"
+                      className="w-full mb-2 inline-flex flex justify-center gap-2 rounded bg-[#171515] dark:bg-white px-5 py-3 text-sm font-medium text-white dark:text-[#171515] hover:bg-[#353232] dark:hover:bg-zinc-300"
                       href="https://github.com/tednih"
                       target="_blank"
                       rel="noreferrer"
@@ -169,7 +166,7 @@ function Navbar() {
                       </svg>
                     </Link>
                     <Link
-                      className="mb-2 inline-flex items-center gap-2 rounded bg-[#171515] dark:bg-white px-5 py-3 text-sm font-medium text-white dark:text-[#171515] hover:bg-[#353232] dark:hover:bg-zinc-300"
+                      className="w-full text-center mb-2 inline-flex flex justify-center gap-2 rounded bg-[#171515] dark:bg-white px-5 py-3 text-sm font-medium text-white dark:text-[#171515] hover:bg-[#353232] dark:hover:bg-zinc-300"
                       href="https://www.instagram.com/dteds_/"
                       target="_blank"
                       rel="noreferrer"

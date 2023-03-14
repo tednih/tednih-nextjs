@@ -40,16 +40,16 @@ const pustaka = (
   </>
 );
 
-const sertifikatBwa = (
-  <>
-    <Image
-      src="/sertifikat-BWA.jpg"
-      alt="Sertifikat BWA"
-      width={300}
-      height={300}
-    />
-  </>
-);
+// const sertifikatBwa = (
+//   <>
+//     <Image
+//       src="/sertifikat-BWA.jpg"
+//       alt="Sertifikat BWA"
+//       width={300}
+//       height={300}
+//     />
+//   </>
+// );
 
 const Projects = [
   {
@@ -64,8 +64,7 @@ const Projects = [
         Project ini dibuat saat saya mengikuti kelas online dari {link}. Di
         project ini saya mempelajari menggunakan ReactJs dan Tailwind serta
         bagaimana membuat skeleton loading, hooks, router, dan lainnya didalam
-        reactJs. Lihat Project : {luxspace}. Hasil dari Kelas ini :{" "}
-        {sertifikatBwa}
+        reactJs. Lihat Project : {luxspace}
       </>
     ),
   },
