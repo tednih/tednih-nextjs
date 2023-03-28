@@ -146,7 +146,7 @@ function Navbar() {
                   <div className="m-auto top-0 w-32 flex-col gap-2">
                     <p className="font-righteous text-center mb-10">Tednih.</p>
                     <Link
-                      className="w-full mb-2 inline-flex flex justify-center gap-2 rounded bg-[#171515] dark:bg-white px-5 py-3 text-sm font-medium text-white dark:text-[#171515] hover:bg-[#353232] dark:hover:bg-zinc-300"
+                      className="w-full mb-2 inline-flex justify-center gap-2 rounded bg-[#171515] dark:bg-white px-5 py-3 text-sm font-medium text-white dark:text-[#171515] hover:bg-[#353232] dark:hover:bg-zinc-300"
                       href="https://github.com/tednih"
                       target="_blank"
                       rel="noreferrer"
@@ -166,7 +166,7 @@ function Navbar() {
                       </svg>
                     </Link>
                     <Link
-                      className="w-full text-center mb-2 inline-flex flex justify-center gap-2 rounded bg-[#171515] dark:bg-white px-5 py-3 text-sm font-medium text-white dark:text-[#171515] hover:bg-[#353232] dark:hover:bg-zinc-300"
+                      className="w-full text-center mb-2 inline-flex justify-center gap-2 rounded bg-[#171515] dark:bg-white px-5 py-3 text-sm font-medium text-white dark:text-[#171515] hover:bg-[#353232] dark:hover:bg-zinc-300"
                       href="https://www.instagram.com/dteds_/"
                       target="_blank"
                       rel="noreferrer"
