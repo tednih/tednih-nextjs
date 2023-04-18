@@ -13,7 +13,7 @@ const DetailProjects = ({ params }) => {
     return <div>Error: Project not found</div>;
   }
   return (
-    <div className="lg:max-w-[1440px] lg:h-screen m-auto overflow-hidden bg-zinc-100 dark:bg-zinc-900">
+    <div className="bg lg:max-w-[1440px] lg:h-screen m-auto overflow-hidden bg-zinc-100 dark:bg-zinc-900">
       <section className="lg:grid lg:grid-cols-2 lg:items-center lg:py-16">
         <div className="p-8 md:p-12 lg:px-16 lg:py-14">
           <div className="mx-auto max-w-xl text-center sm:text-left">

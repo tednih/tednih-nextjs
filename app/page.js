@@ -5,7 +5,7 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <div className="flex justify-center h-screen items-center bg-zinc-100 dark:bg-zinc-900">
+      <div className="bg flex justify-center h-screen items-center bg-zinc-100 dark:bg-zinc-900">
         <section>
           <div className="mx-auto lg:max-w-lg max-w-sm text-center hover:cursor-default">
             <h2 className="text-2xl text-gray-900 dark:text-white font-bold md:text-3xl">

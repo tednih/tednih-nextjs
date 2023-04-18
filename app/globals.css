@@ -15,5 +15,16 @@
     font-family: "League Spartan", sans-serif;
     max-width: 1440px;
     margin: auto;
+    scroll-behavior: smooth;
   }
+}
+
+html, body {
+  height: 100%;
+}
+
+.bg{
+ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='1000' preserveAspectRatio='none' viewBox='0 0 1440 1000'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1042%26quot%3b)' fill='none'%3e%3cpath d='M1.58 597.45 a253.68 253.68 0 1 0 507.36 0 a253.68 253.68 0 1 0 -507.36 0z' fill='rgba(28%2c 240%2c 67%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M-176.58 39.42 a194.21 194.21 0 1 0 388.42 0 a194.21 194.21 0 1 0 -388.42 0z' fill='rgba(28%2c 240%2c 67%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M707.39 309.94 a230.35 230.35 0 1 0 460.7 0 a230.35 230.35 0 1 0 -460.7 0z' fill='rgba(28%2c 240%2c 67%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M581.27 872.91 a247.51 247.51 0 1 0 495.02 0 a247.51 247.51 0 1 0 -495.02 0z' fill='rgba(28%2c 240%2c 67%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1355.213%2c985.256C1391.36%2c982.892%2c1423.499%2c963.797%2c1441.831%2c932.554C1460.406%2c900.898%2c1465.208%2c861.415%2c1446.361%2c829.921C1427.941%2c799.141%2c1391.053%2c786.329%2c1355.213%2c787.814C1322.017%2c789.189%2c1295.147%2c809.626%2c1276.271%2c836.967C1253.458%2c870.01%2c1227.594%2c909.889%2c1246.463%2c945.332C1265.912%2c981.866%2c1313.913%2c987.957%2c1355.213%2c985.256' fill='rgba(28%2c 240%2c 67%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1042'%3e%3crect width='1440' height='1000' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: center;
 }

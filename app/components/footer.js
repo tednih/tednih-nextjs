@@ -5,7 +5,7 @@ const Footer = () => {
     <div className="">
       <footer
         aria-label="Site Footer"
-        className="bg-zinc-100 dark:bg-zinc-900 mx-auto flex lg:max-w-[1440px] items-center justify-between "
+        className="bg-zinc-100 dark:bg-zinc-900 mx-auto flex lg:max-w-[1440px] items-center justify-between p-0 m-0"
       >
         <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
           <div className="flex justify-center sm:justify-start">
