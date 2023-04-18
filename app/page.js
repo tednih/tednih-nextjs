@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Home | Tednih",
-};
+  title: 'Home | Tednih.',
+}
 
 export default function Home() {
   return (
