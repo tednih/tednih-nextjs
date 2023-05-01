@@ -1,5 +1,7 @@
 import Foto1 from "../../public/luxspace.png";
-import Foto3 from "../../public/portfolio2.jpg";
+import Foto2 from "../../public/portfolio2.jpg";
+import Foto3 from "../../public/GieStore.jpg";
+import Foto4 from "../../public/tednih.jpg";
 import React from "react";
 import Image from "next/image";
 
@@ -73,9 +75,9 @@ const Projects = [
     id: 2,
     judul: "Pustaka Booking",
     tanggal: "28 Mei 2019",
-    foto: Foto3,
-    bahasa: ["PHP"],
-    tools: ["CodeIgniter"],
+    foto: Foto2,
+    bahasa: ["HTML","CSS","PHP", "SQL"],
+    tools: ["CodeIgniter", "Bootstrap", "PhpMyAdmin"],
     deskripsi: (
       <>
         Aplikasi Web dengan Framework Codeigniter. Ini adalah aplikasi web yang
@@ -84,6 +86,32 @@ const Projects = [
         project ini saya mempelajari bahasa pemrograman PHP dan cara CRUD
         menggunakan framework CodeIgniter 3. Lihat sourcecode : {pustaka}
       </>
+    ),
+  },
+  {
+    id: 3,
+    judul: "GieStore",
+    tanggal: "14 April 2023",
+    foto: Foto3,
+    bahasa: ["HTML","CSS","C#", "SQL"],
+    tools: [".NET", "Bootstrap", "SqlServer"],
+    deskripsi: (
+      <>
+        Project bootcamp offline dari PT.Global Service Academy. Disini kami membuat sebuah website toko online, dimana ada pengguna, admin dan pemilik. yang dimana masing-masing memiliki perannya tersendiri. pengguna, hanya dapat melihat stock dan harga yg tersedia. kasir, merestock barang dan harga serta mencatat laporan harian. pemilik, melihat lapor dari kasir. 
+      </>
+    ),
+  },
+  {
+    id: 4,
+    judul: "Tednih",
+    tanggal: "26 Februari 2023",
+    foto: Foto4,
+    bahasa: ["HTML","CSS","JavaScript"],
+    tools: ["React", "Tailwind", "NextJS"],
+    deskripsi: (
+      <>
+        Portfolio sederhana menggunakan NextJS "appDir" dan TailwindCSS
+        </>
     ),
   },
 ];

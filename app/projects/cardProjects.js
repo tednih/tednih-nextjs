@@ -53,12 +53,12 @@ const CardProjects = () => {
 
             {selectedTool.map((tooll, index) => (
               <ol className="flex flex-row">
-                <div className="flex-row flex space-x-2 bg-violet-200 text-xs px-2.5 text-violet-600 dark:bg-violet-600 dark:text-violet-100 rounded-l-full">
+                <div className="flex-row flex space-x-2 bg-green-200 text-xs px-2.5 text-green-600 dark:bg-green-600 dark:text-green-100 rounded-l-full">
                   <span className="">{tooll}</span>
                 </div>
 
                 <span
-                  className=" cursor-pointer flex bg-violet-200 text-xs text-violet-600 dark:bg-violet-600 dark:text-violet-100 hover:bg-violet-300 hover:dark:bg-violet-500 rounded-r-full"
+                  className=" cursor-pointer flex bg-green-200 text-xs text-green-600 dark:bg-green-600 dark:text-green-100 hover:bg-green-300 hover:dark:bg-green-500 rounded-r-full"
                   onClick={() => {
                     const newRole = [...selectedTool];
                     newRole.splice(index, 1);
@@ -129,7 +129,7 @@ const CardProjects = () => {
                   {project.tools.map((tool) => {
                     return (
                       <span
-                        className="cursor-pointer whitespace-nowrap rounded-full bg-violet-200 px-2.5 py-0.5 text-xs text-violet-600 dark:bg-violet-600 dark:text-violet-100 hover:bg-violet-300 hover:dark:bg-violet-500"
+                        className="cursor-pointer whitespace-nowrap rounded-full bg-green-200 px-2.5 py-0.5 text-xs text-green-600 dark:bg-green-600 dark:text-green-100 hover:bg-green-300 hover:dark:bg-green-500"
                         key={tool}
                         onClick={() => setSelectedTool([...selectedTool, tool])}
                       >
