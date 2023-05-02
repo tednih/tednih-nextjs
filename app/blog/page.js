@@ -1,9 +1,10 @@
 import React from "react";
+import CardBlogs from "./cardBlogs";
 
 const Blog = () => {
   return (
-    <div className="bg-zinc-100 dark:bg-zinc-900 lg:max-w-[1440px] m-auto">
-      Coming Soon...
+    <div className="bg bg-zinc-100 dark:bg-zinc-900 py-10 ">
+      <CardBlogs />
     </div>
   );
 };
