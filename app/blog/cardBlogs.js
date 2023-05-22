@@ -2,10 +2,11 @@ import React from "react";
 import { Blogs } from "./dataBlogs";
 import Image from "next/image";
 import Link from "next/link";
+import "animate.css";
 
 const CardBlogs = () => {
   return (
-    <div className="bg-zinc-200 dark:bg-zinc-800 bg-opacity-50 dark:bg-opacity-50 backdrop-blur-sm lg:max-w-[800px] md:max-w-[600px] max-w-[430px] m-auto rounded-xl items-center gap-4 p-10">
+    <div className="animate__animated animate__backInRight bg-zinc-200 dark:bg-zinc-800 bg-opacity-50 dark:bg-opacity-50 backdrop-blur-sm lg:max-w-[800px] md:max-w-[600px] max-w-[430px] m-auto rounded-xl items-center gap-4 p-10">
       {Blogs.map((blog) => {
         return (
           <article
