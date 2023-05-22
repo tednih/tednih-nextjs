@@ -3,6 +3,7 @@ import { Projects } from "./dataProjects";
 import Image from "next/image";
 import { XCircleIcon } from "@heroicons/react/solid";
 import Link from "next/link";
+import "animate.css";
 
 const CardProjects = () => {
   const [selectedBahasa, setSelectedBahasa] = useState([]);
@@ -87,7 +88,7 @@ const CardProjects = () => {
         {filteredProjects.map((project) => {
           return (
             <article
-              className="animate-background lg:max-w-[400px] m-auto rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-[length:400%_400%] p-0.5 shadow-xl transition [animation-duration:_6s] hover:shadow-sm dark:shadow-gray-700/25"
+              className=" animate-background lg:max-w-[400px] m-auto rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-[length:400%_400%] p-0.5 shadow-xl transition [animation-duration:_6s] hover:shadow-sm dark:shadow-gray-700/25"
               key={project.id}
             >
               <div className="rounded-[10px] bg-zinc-100 dark:bg-zinc-900 p-4 sm:p-6">
@@ -98,7 +99,7 @@ const CardProjects = () => {
                 />
                 <time
                   dateTime={project.tanggal}
-                  className="block text-xs text-gray-500 dark:text-gray-400"
+                  className="animate__animated animate__bounce block text-xs text-gray-500 dark:text-gray-400"
                 >
                   {project.tanggal}
                 </time>
@@ -106,7 +107,7 @@ const CardProjects = () => {
                 <span>
                   <Link
                     href={`/projects/${project.id}`}
-                    className="mt-0.5 text-lg font-medium text-gray-900 dark:text-white hover:underline"
+                    className="animate__animated animate__bounce mt-0.5 text-lg font-medium text-gray-900 dark:text-white hover:underline"
                   >
                     {project.judul}
                   </Link>
@@ -115,7 +116,7 @@ const CardProjects = () => {
                   {project.bahasa.map((bhsa) => {
                     return (
                       <span
-                        className="cursor-pointer whitespace-nowrap rounded-full bg-violet-200 px-2.5 py-0.5 text-xs text-violet-600 dark:bg-violet-600 dark:text-violet-100 hover:bg-violet-300 hover:dark:bg-violet-500"
+                        className="animate__animated animate__jackInTheBox cursor-pointer whitespace-nowrap rounded-full bg-violet-200 px-2.5 py-0.5 text-xs text-violet-600 dark:bg-violet-600 dark:text-violet-100 hover:bg-violet-300 hover:dark:bg-violet-500"
                         key={bhsa}
                         onClick={() =>
                           setSelectedBahasa([...selectedBahasa, bhsa])
@@ -129,7 +130,7 @@ const CardProjects = () => {
                   {project.tools.map((tool) => {
                     return (
                       <span
-                        className="cursor-pointer whitespace-nowrap rounded-full bg-green-200 px-2.5 py-0.5 text-xs text-green-600 dark:bg-green-600 dark:text-green-100 hover:bg-green-300 hover:dark:bg-green-500"
+                        className="animate__animated animate__jackInTheBox cursor-pointer whitespace-nowrap rounded-full bg-green-200 px-2.5 py-0.5 text-xs text-green-600 dark:bg-green-600 dark:text-green-100 hover:bg-green-300 hover:dark:bg-green-500"
                         key={tool}
                         onClick={() => setSelectedTool([...selectedTool, tool])}
                       >
