@@ -3,6 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
+import "animate.css";
 
 export default function RootLayout({ children }) {
   return (

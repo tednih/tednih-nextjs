@@ -12,42 +12,42 @@ const CardBlogs = () => {
             className="flex animate-background m-auto rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 p-0.5 shadow-xl transition [animation-duration:_6s] hover:shadow-sm dark:shadow-gray-700/25 mb-4"
             key={blog.id}
           >
-            <div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
+            <div className="rotate-180 p-2 [writing-mode:_vertical-lr]">
               <time
                 datetime={blog.tanggal}
-                class="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-600"
+                className="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-600"
               >
                 <span>{blog.tanggal.split(" ").pop()}</span>
-                <span class="w-px flex-1 bg-gray-600"></span>
+                <span className="w-px flex-1 bg-gray-600"></span>
                 <span>{blog.tanggal.split(" ").slice(0, -1).join(" ")}</span>
               </time>
             </div>
 
-            <div class="hidden sm:block sm:basis-56">
+            <div className="hidden sm:block sm:basis-56">
               <Image
                 alt="Guitar"
                 src={blog.foto.Foto1}
-                class="aspect-square h-full w-full object-cover"
+                className="aspect-square h-full w-full object-cover"
               />
             </div>
 
-            <div class="flex flex-1 flex-col justify-between bg-zinc-100 dark:bg-zinc-900 rounded-tr-xl rounded-br-xl">
-              <div class="border-s border-gray-900/10 p-4 dark:border-white/10 sm:!border-l-transparent sm:p-6">
+            <div className="flex flex-1 flex-col justify-between bg-zinc-100 dark:bg-zinc-900 rounded-tr-xl rounded-br-xl">
+              <div className="border-s border-gray-900/10 p-4 dark:border-white/10 sm:!border-l-transparent sm:p-6">
                 <Link href={`/blog/${blog.id}`}>
-                  <h3 class="font-bold uppercase text-gray-900 dark:text-white">
+                  <h3 className="font-bold uppercase text-gray-900 dark:text-white">
                     {blog.judul}
                   </h3>
                 </Link>
 
-                <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-700 dark:text-gray-200">
+                <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-700 dark:text-gray-200">
                   {blog.deskripsi}
                 </p>
               </div>
 
-              <div class="sm:flex sm:items-end sm:justify-end">
+              <div className="sm:flex sm:items-end sm:justify-end">
                 <Link
                   href={`/blog/${blog.id}`}
-                  class="rounded-br-xl block bg-yellow-400 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-500"
+                  className="rounded-br-xl block bg-yellow-400 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-500"
                 >
                   Read Blog
                 </Link>

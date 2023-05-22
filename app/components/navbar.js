@@ -91,7 +91,7 @@ function Navbar() {
             </Link>
           </nav>
 
-          <div className="flex-1 items-center justify-end gap-4 flex animate-bounce">
+          <div className="animate__animated animate__shakeY flex-1 items-center justify-end gap-4 flex ">
             <DarkMode />
           </div>
 

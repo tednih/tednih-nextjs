@@ -14,14 +14,14 @@ const DetailBlogs = ({ params }) => {
   }
   return (
     <>
-      <section class="overflow-hidden bg-zinc-100 dark:bg-zinc-900 sm:grid sm:grid-cols-2 border-b-4 ">
-        <div class="p-8 md:p-12 lg:px-16 lg:py-24 items-center m-auto">
-          <div class="mx-auto max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
-            <h2 class="text-2xl font-bold text-gray-900 dark:text-white md:text-3xl">
+      <section className="overflow-hidden bg-zinc-100 dark:bg-zinc-900 sm:grid sm:grid-cols-2 border-b-4 ">
+        <div className="p-8 md:p-12 lg:px-16 lg:py-24 items-center m-auto">
+          <div className="mx-auto max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white md:text-3xl">
               {detail.judul}
             </h2>
 
-            <p class="text-gray-500 dark:text-gray-300 md:mt-4 md:block">
+            <p className="text-gray-500 dark:text-gray-300 md:mt-4 md:block">
               {detail.deskripsi}
             </p>
           </div>
@@ -30,23 +30,23 @@ const DetailBlogs = ({ params }) => {
         <Image
           alt="Student"
           src={detail.foto.Foto1}
-          class="h-56 w-full object-cover sm:h-full"
+          className="h-56 w-full object-cover sm:h-full"
         />
       </section>
-      <section class="overflow-hidden bg-zinc-900 dark:bg-zinc-100 sm:grid sm:grid-cols-2 border-b-4">
+      <section className="overflow-hidden bg-zinc-900 dark:bg-zinc-100 sm:grid sm:grid-cols-2 border-b-4">
         <Image
           alt="Student"
           src={detail.foto.Foto2}
-          class="h-56 w-full object-cover sm:h-full"
+          className="h-56 w-full object-cover sm:h-full"
         />
 
-        <div class="p-8 md:p-12 lg:px-16 lg:py-24 items-center m-auto">
-          <div class="mx-auto max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
-            <h2 class="text-2xl font-bold text-white dark:text-gray-900 md:text-3xl">
+        <div className="p-8 md:p-12 lg:px-16 lg:py-24 items-center m-auto">
+          <div className="mx-auto max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
+            <h2 className="text-2xl font-bold text-white dark:text-gray-900 md:text-3xl">
               {detail.judul}
             </h2>
 
-            <p class="text-gray-300 dark:text-gray-500 md:mt-4 md:block">
+            <p className="text-gray-300 dark:text-gray-500 md:mt-4 md:block">
               {detail.deskripsi2}
             </p>
           </div>

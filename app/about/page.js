@@ -1,5 +1,6 @@
 import React from "react";
 import CardAbout from "../about/cardAbout";
+import "animate.css";
 
 const About = () => {
   return (
