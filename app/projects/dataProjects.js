@@ -2,6 +2,7 @@ import Foto1 from "../../public/luxspace.png";
 import Foto2 from "../../public/portfolio2.jpg";
 import Foto3 from "../../public/GieStore.jpg";
 import Foto4 from "../../public/tednih.jpg";
+import Foto5 from "../../public/bp.jpg";
 import React from "react";
 import Image from "next/image";
 
@@ -117,6 +118,24 @@ const Projects = [
     tools: ["React", "Tailwind", "NextJS"],
     deskripsi: (
       <>A simple portfolio built using Next.js "appDir" and Tailwind CSS</>
+    ),
+  },
+  {
+    id: 5,
+    judul: "Peminjaman Asset BP",
+    tanggal: "14 Juni 2023",
+    foto: Foto5,
+    bahasa: ["HTML", "CSS", "PHP", "SQL"],
+    tools: ["Laravel", "Tailwind", "Laragon"],
+    deskripsi: (
+      <>
+        I was assigned to make an asset lending website at PT. BinaPertiwi uses
+        laravel 10 and tailwind css. for the database I use mysql from laragon
+        (Adminer). On this website, the main page is a loan form for employees
+        to borrow assets such as laptops, printers or other items. then there is
+        an admin page to manage the availability of goods and accept or not
+        borrow. This website has also been integrated by email.
+      </>
     ),
   },
 ];
