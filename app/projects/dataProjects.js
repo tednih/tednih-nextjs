@@ -1,8 +1,8 @@
-import Foto1 from "../../public/luxspace.png";
-import Foto2 from "../../public/portfolio2.jpg";
-import Foto3 from "../../public/GieStore.jpg";
-import Foto4 from "../../public/tednih.jpg";
-import Foto5 from "../../public/bp.jpg";
+import Foto1 from "../../public/project1/image1.jpg";
+import Foto2 from "../../public/project2/image1.jpg";
+import Foto3 from "../../public/project3/image2.jpg";
+import Foto4 from "../../public/project4/image1.jpg";
+import Foto5 from "../../public/project5/image1.jpg";
 import React from "react";
 import Image from "next/image";
 

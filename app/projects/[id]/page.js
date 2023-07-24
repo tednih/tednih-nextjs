@@ -3,12 +3,18 @@
 import Image from "next/image";
 import React from "react";
 import { Projects } from "../dataProjects";
+import Carousel from "@/app/components/carousel";
 
 const DetailProjects = ({ params }) => {
   const { id } = params;
   const detail = Projects.find((project) => {
     return project.id === parseInt(id);
   });
+  const imageCount = 3; // Ganti dengan jumlah gambar proyek yang Anda miliki
+  const projectImages = Array.from(
+    { length: imageCount },
+    (_, i) => `/project${id}/image${i + 1}.jpg`
+  );
   if (!detail) {
     return <div>Error: Project not found</div>;
   }
@@ -26,12 +32,7 @@ const DetailProjects = ({ params }) => {
             </p>
           </div>
         </div>
-
-        <Image
-          alt=""
-          src={detail.foto}
-          className="lg:h-full lg:w-full h-[300px] w-[600px] m-auto object-fit items-center rounded-md"
-        />
+        <Carousel images={projectImages} />
       </section>
     </div>
   );

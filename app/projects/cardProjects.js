@@ -96,6 +96,7 @@ const CardProjects = () => {
                   alt=""
                   src={project.foto}
                   className="h-56 w-full object-cover mb-2"
+                  layout="responsive"
                 />
                 <time
                   dateTime={project.tanggal}
