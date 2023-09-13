@@ -37,7 +37,7 @@ const cardAbout = () => {
             </h4>
             <div className="grid gap-4 grid-cols-6 grid-rows-3">
               <div className="group/item h-12 w-12 text-bottom flex items-center">
-                <span className="absolute group-hover/item:visible z-10 invisible w-auto px-2 m-auto text-center bg-slate-400/80 rounded-md">
+                <span className="absolute group-hover/item:visible z-10 -mb-20 invisible w-auto px-2 m-auto text-center bg-slate-400/80 rounded-md">
                   HTML
                 </span>
                 <svg
@@ -65,7 +65,7 @@ const cardAbout = () => {
                 </svg>
               </div>
               <div className="group/item h-12 w-12 text-bottom flex items-center">
-                <span className="absolute group-hover/item:visible z-10 invisible w-auto px-2 m-auto text-center bg-slate-400/80 rounded-md">
+                <span className="absolute group-hover/item:visible z-10 -mb-20 invisible w-auto px-2 m-auto text-center bg-slate-400/80 rounded-md">
                   CSS
                 </span>
                 <svg
@@ -91,7 +91,7 @@ const cardAbout = () => {
                 </svg>
               </div>
               <div className="group/item h-12 w-12 text-bottom flex items-center">
-                <span className="absolute group-hover/item:visible z-10 invisible w-auto px-2 m-auto text-center bg-slate-400/80 rounded-md">
+                <span className="absolute group-hover/item:visible z-10 -mb-20 invisible w-auto px-2 m-auto text-center bg-slate-400/80 rounded-md">
                   Java Script
                 </span>
                 <svg
@@ -123,7 +123,7 @@ const cardAbout = () => {
                 </svg>
               </div>
               <div className="group/item h-12 w-12 text-bottom flex items-center">
-                <span className="absolute group-hover/item:visible z-10 invisible w-auto px-2 m-auto text-center bg-slate-400/80 rounded-md">
+                <span className="absolute group-hover/item:visible z-10 -mb-20 invisible w-auto px-2 m-auto text-center bg-slate-400/80 rounded-md">
                   C Sharp
                 </span>
                 <svg
@@ -179,7 +179,7 @@ const cardAbout = () => {
                 </svg>
               </div>
               <div className="group/item h-12 w-12 text-bottom flex items-center">
-                <span className="absolute group-hover/item:visible z-10 invisible w-auto px-2 m-auto text-center bg-slate-400/80 rounded-md">
+                <span className="absolute group-hover/item:visible z-10 -mb-20 invisible w-auto px-2 m-auto text-center bg-slate-400/80 rounded-md">
                   PHP
                 </span>
                 <svg
@@ -202,7 +202,7 @@ const cardAbout = () => {
                 </svg>
               </div>
               <div className="group/item h-12 w-12 text-bottom flex items-center">
-                <span className="absolute group-hover/item:visible z-10 invisible w-auto px-2 m-auto text-center bg-slate-400/80 rounded-md">
+                <span className="absolute group-hover/item:visible z-10 -mb-20 invisible w-auto px-2 m-auto text-center bg-slate-400/80 rounded-md">
                   SQL
                 </span>
 
@@ -229,7 +229,7 @@ const cardAbout = () => {
                 </svg>
               </div>
               <div className="group/item h-12 w-12 text-bottom flex items-center">
-                <span className="absolute group-hover/item:visible z-10 invisible w-auto px-2 m-auto text-center bg-slate-400/80 rounded-md">
+                <span className="absolute group-hover/item:visible z-10 -mb-20 invisible w-auto px-2 m-auto text-center bg-slate-400/80 rounded-md">
                   React
                 </span>
                 <svg
@@ -259,7 +259,7 @@ const cardAbout = () => {
                 </svg>
               </div>
               <div className="group/item h-12 w-12 text-bottom flex items-center">
-                <span className="absolute group-hover/item:visible z-10 invisible w-auto px-2 m-auto text-center bg-slate-400/80 rounded-md">
+                <span className="absolute group-hover/item:visible z-10 -mb-20  invisible w-auto px-2 m-auto text-center bg-slate-400/80 rounded-md">
                   .NET
                 </span>
                 <svg
@@ -280,7 +280,7 @@ const cardAbout = () => {
                 </svg>
               </div>
               <div className="group/item h-12 w-12 text-bottom flex items-center">
-                <span className="absolute group-hover/item:visible z-10 invisible w-auto px-2 m-auto text-center bg-slate-400/80 rounded-md">
+                <span className="absolute group-hover/item:visible z-10 -mb-20 invisible w-auto px-2 m-auto text-center bg-slate-400/80 rounded-md">
                   Code-igniter
                 </span>
                 <svg
@@ -303,7 +303,7 @@ const cardAbout = () => {
                 </svg>
               </div>
               <div className="group/item h-12 w-12 text-bottom flex items-center">
-                <span className="absolute group-hover/item:visible z-10 invisible w-auto px-2 m-auto text-center bg-slate-400/80 rounded-md">
+                <span className="absolute group-hover/item:visible z-10 -mb-20 invisible w-auto px-2 m-auto text-center bg-slate-400/80 rounded-md">
                   NextJS
                 </span>
                 <svg
@@ -327,7 +327,7 @@ const cardAbout = () => {
                 </svg>
               </div>
               <div className="group/item h-12 w-12 text-bottom flex items-center">
-                <span className="absolute group-hover/item:visible z-10 invisible w-auto px-2 m-auto text-center bg-slate-400/80 rounded-md">
+                <span className="absolute group-hover/item:visible z-10 -mb-20 invisible w-auto px-2 m-auto text-center bg-slate-400/80 rounded-md">
                   Tailwind CSS
                 </span>
                 <svg
@@ -351,7 +351,7 @@ const cardAbout = () => {
               </div>
 
               <div className="group/item h-12 w-12 text-bottom flex items-center">
-                <span className="absolute group-hover/item:visible z-10 invisible w-auto px-2 m-auto text-center bg-slate-400/80 rounded-md">
+                <span className="absolute group-hover/item:visible z-10 -mb-20 invisible w-auto px-2 m-auto text-center bg-slate-400/80 rounded-md">
                   Bootstrap
                 </span>
                 <svg
@@ -374,7 +374,7 @@ const cardAbout = () => {
                 </svg>
               </div>
               <div className="group/item h-12 w-12 text-bottom flex items-center">
-                <span className="absolute group-hover/item:visible z-10 invisible w-auto px-2 m-auto text-center bg-slate-400/80 rounded-md">
+                <span className="absolute group-hover/item:visible z-10 -mb-20 invisible w-auto px-2 m-auto text-center bg-slate-400/80 rounded-md">
                   MySql
                 </span>
                 <svg
@@ -397,7 +397,7 @@ const cardAbout = () => {
                 </svg>
               </div>
               <div className="group/item h-12 w-12 text-bottom flex items-center">
-                <span className="absolute group-hover/item:visible z-10 invisible w-auto px-2 m-auto text-center bg-slate-400/80 rounded-md">
+                <span className="absolute group-hover/item:visible z-10 -mb-20 invisible w-auto px-2 m-auto text-center bg-slate-400/80 rounded-md">
                   SQL Server
                 </span>
                 <svg
