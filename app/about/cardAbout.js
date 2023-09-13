@@ -20,11 +20,17 @@ const cardAbout = () => {
           </h2>
 
           <p className="text-gray-500 dark:text-gray-300 md:mt-4 md:block">
-            Hello! I'm Freshgraduate Bachelor System Information. My skill is
-            web Development, especially front-end . I also graduated from VHS
-            with a major in software engineering, attended a bootcamp, and
-            online classes about web developers. With this, I am quite familiar
-            with coding or other things in the IT world.
+            As an experienced Web Developer, I specialize in crafting dynamic
+            web applications with a strong command of both frontend and backend
+            technologies. On the backend, I'm skilled in utilizing Node.js,
+            Laravel, and ASP.NET Core to develop robust and scalable server-side
+            solutions. For frontend development, I leverage the power of
+            React.js and Next.js to build engaging user interfaces, complemented
+            by the use of Tailwind CSS and Bootstrap for efficient styling. I am
+            well-versed in database management, working with diverse systems
+            such as MongoDb, MySQL, and SQL Server. My expertise in UI/UX
+            principles allows me to design responsive, intuitive, and visually
+            appealing interfaces.
           </p>
         </div>
         <div className="mt-5 animate__animated animate__backInRight bg-zinc-200 dark:bg-zinc-800 bg-opacity-50 dark:bg-opacity-50 backdrop-blur-sm xl:max-w-[750px] lg:max-w-[380px] md:max-w-[500px] max-w-[430px] m-auto rounded-xl items-center gap-4 p-10">
@@ -32,7 +38,7 @@ const cardAbout = () => {
             Skills
           </h2>
           <div className="block">
-            <h4 className="text-xl text-gray-900 dark:text-white">
+            <h4 className="text-xl text-gray-900 mb-2 dark:text-white">
               My coding skills.
             </h4>
             <div className="grid gap-4 grid-cols-6 grid-rows-3">
