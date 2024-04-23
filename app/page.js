@@ -14,9 +14,9 @@ export default function Home() {
             </h2>
 
             <p className="animate__animated animate__backInRight text-gray-700 dark:text-gray-100 mt-8">
-              I'm a software engineer for now focused on frontend developer. I
-              have a passion for solving problem and excited to learn new
-              things.
+              I'm a IT Development for now focused on SAP S/4HANA ABAPER. I have
+              a passion for solving problem and excited to learn new things. I
+              also a Fullstack Developer.
             </p>
           </div>
         </section>
