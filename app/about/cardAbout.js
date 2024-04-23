@@ -20,17 +20,19 @@ const cardAbout = () => {
           </h2>
 
           <p className="text-gray-500 dark:text-gray-300 md:mt-4 md:block">
-            As an experienced Web Developer, I specialize in crafting dynamic
-            web applications with a strong command of both frontend and backend
-            technologies. On the backend, I'm skilled in utilizing Node.js,
-            Laravel, and ASP.NET Core to develop robust and scalable server-side
-            solutions. For frontend development, I leverage the power of
-            React.js and Next.js to build engaging user interfaces, complemented
-            by the use of Tailwind CSS and Bootstrap for efficient styling. I am
-            well-versed in database management, working with diverse systems
-            such as MongoDb, MySQL, and SQL Server. My expertise in UI/UX
-            principles allows me to design responsive, intuitive, and visually
-            appealing interfaces.
+            As an IT developer, I have extensive experience in SAP ABAP and web
+            development. In ABAP, I specialize in SD and MM modules, developing
+            reports to consume external APIs, creating APIs in SAP for callback
+            responses, and maintaining both background and non-background job
+            reports. Additionally, I conduct SIT and UAT testing. As a seasoned
+            web developer, I excel in creating dynamic web applications,
+            proficient in both frontend and backend technologies. On the
+            backend, I utilize Node.js, Laravel, and ASP.NET Core to develop
+            robust server-side solutions. For frontend development, I leverage
+            React.js and Next.js to craft engaging user interfaces, complemented
+            by Tailwind CSS and Bootstrap for efficient styling. I am adept in
+            database management, working with systems like MongoDB, MySQL, and
+            SQL Server.
           </p>
         </div>
         <div className="mt-5 animate__animated animate__backInRight bg-zinc-200 dark:bg-zinc-800 bg-opacity-50 dark:bg-opacity-50 backdrop-blur-sm xl:max-w-[750px] lg:max-w-[380px] md:max-w-[500px] max-w-[430px] m-auto rounded-xl items-center gap-4 p-10">
