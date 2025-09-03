@@ -7,7 +7,7 @@ export const metadata = {
 
 const About = () => {
   return (
-    <div className="bg bg-zinc-100 dark:bg-zinc-900 py-10 ">
+    <div>
       <CardAbout />
     </div>
   );

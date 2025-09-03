@@ -1,49 +1,52 @@
-import Image from "next/image";
 import { useState } from "react";
 
-const Carousel = ({ images }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+export default function Carousel({ images }) {
+  const [current, setCurrent] = useState(0);
 
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
+  if (!Array.isArray(images) || images.length === 0) {
+    return <p>Loading...</p>;
+  }
+
+  const length = images.length;
+
+  const nextSlide = () => {
+    setCurrent((prev) => (prev === length - 1 ? 0 : prev + 1));
   };
 
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
-    );
+  const prevSlide = () => {
+    setCurrent((prev) => (prev === 0 ? length - 1 : prev - 1));
   };
 
   return (
-    <div className="relative">
-      <Image
-        alt=""
-        src={images[currentIndex]}
-        height={200}
-        width={500}
-        className="h-[300px] w-[600px] m-auto my-2 object-cover rounded-md"
-        layout="responsive"
-      />
-      <div className="absolute inset-y-0 left-0 flex items-center justify-center">
-        <button
-          className="bg-gray-800 text-white p-2 rounded-full hover:bg-gray-900 focus:outline-none"
-          onClick={handlePrev}
-        >
-          &lt;
-        </button>
+    <div className="relative w-full max-w-xl mx-auto">
+      <div className="overflow-hidden rounded-2xl">
+        {images.map((img, index) => (
+          <div
+            key={index}
+            className={`transition-opacity duration-500 ease-in-out ${
+              index === current ? "opacity-100" : "opacity-0 absolute"
+            }`}
+          >
+            <img
+              src={img}
+              alt={`Slide ${index}`}
+              className="w-full h-64 object-cover"
+            />
+          </div>
+        ))}
       </div>
-      <div className="absolute inset-y-0 right-0 flex items-center justify-center">
-        <button
-          className="bg-gray-800 text-white p-2 rounded-full hover:bg-gray-900 focus:outline-none"
-          onClick={handleNext}
-        >
-          &gt;
-        </button>
-      </div>
+      <button
+        onClick={prevSlide}
+        className="absolute top-1/2 left-4 -translate-y-1/2 bg-primary p-2 rounded-full shadow"
+      >
+        ◀
+      </button>
+      <button
+        onClick={nextSlide}
+        className="absolute top-1/2 right-4 -translate-y-1/2 bg-primary p-2 rounded-full shadow"
+      >
+        ▶
+      </button>
     </div>
   );
-};
-
-export default Carousel;
+}
