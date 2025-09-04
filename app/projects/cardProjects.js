@@ -168,7 +168,7 @@ const CardProjects = () => {
                   {session ? (
                     <button
                       onClick={() => handleEdit(project._id)} // panggil fungsi untuk buka form edit
-                      className="absolute -top-2 -right-2 bg-button hover:bg-button/90 p-1 rounded-full"
+                      className="absolute top-0 right-0 bg-button hover:bg-button/90 p-1 rounded-full"
                       title="Edit Project"
                     >
                       <PencilIcon className="h-5 w-5 text-primary dark:text-darkprimary" />
