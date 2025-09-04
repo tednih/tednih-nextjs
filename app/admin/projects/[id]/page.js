@@ -156,42 +156,48 @@ const UpdateProjectForm = ({ projectId, onLoadingChange, onSuccess }) => {
              focus:outline-none"
           readOnly={isLoading}
         />
-        <label>Bahasa</label>
+        <label>Bahasa</label>{" "}
         <CreatableSelect
           isMulti
           options={bahasaOptions}
           value={bahasa}
           onChange={(selected) => setBahasa(selected)}
           placeholder="Pilih atau tambahkan Bahasa"
-          menuPlacement="auto" // biar dropdown buka ke atas/bawah sesuai ruang
-          menuPosition="fixed" // fix posisi relatif viewport, bukan parent
           menuPortalTarget={
             typeof window !== "undefined" ? document.body : null
           }
+          menuShouldScrollIntoView={false}
+          closeMenuOnScroll={false}
+          menuShouldBlockScroll={true}
           styles={{
             menuPortal: (base) => ({ ...base, zIndex: 9999 }),
-            menu: (base) => ({ ...base, position: "fixed" }), // lebih stabil saat keyboard naik
           }}
+          className="w-full p-2 mb-4 rounded text-text dark:text-darktext
+             border-2 border-gray-400 dark:border-gray-600 
+             focus:border-button focus:ring-2 focus:ring-button 
+             focus:outline-none"
         />
-
         <label>Tools</label>
         <CreatableSelect
           isMulti
           options={toolsOptions}
           value={tools}
           onChange={(selected) => setTools(selected)}
-          placeholder="Pilih atau tambahkan tools"
-          menuPlacement="auto" // biar dropdown buka ke atas/bawah sesuai ruang
-          menuPosition="fixed" // fix posisi relatif viewport, bukan parent
+          placeholder="Pilih atau tambahkan Tools"
           menuPortalTarget={
             typeof window !== "undefined" ? document.body : null
           }
+          menuShouldScrollIntoView={false}
+          closeMenuOnScroll={false}
+          menuShouldBlockScroll={true}
           styles={{
             menuPortal: (base) => ({ ...base, zIndex: 9999 }),
-            menu: (base) => ({ ...base, position: "fixed" }), // lebih stabil saat keyboard naik
           }}
+          className="w-full p-2 mb-4 rounded text-text dark:text-darktext
+             border-2 border-gray-400 dark:border-gray-600 
+             focus:border-button focus:ring-2 focus:ring-button 
+             focus:outline-none"
         />
-
         <label>Deskripsi</label>
         <textarea
           value={deskripsi}
