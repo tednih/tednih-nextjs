@@ -171,11 +171,27 @@ const UpdateProjectForm = ({ projectId, onLoadingChange, onSuccess }) => {
           menuShouldBlockScroll={true}
           styles={{
             menuPortal: (base) => ({ ...base, zIndex: 9999 }),
+            control: (base, state) => ({
+              ...base,
+              boxShadow: "none", // hapus biru default
+              border: state.isFocused ? "2px solid #006400" : "2px solid grey", // hijau saat fokus
+              "&:hover": "none",
+            }),
           }}
-          className="w-full p-2 mb-4 rounded text-text dark:text-darktext
-             border-2 border-gray-400 dark:border-gray-600 
-             focus:border-button focus:ring-2 focus:ring-button 
-             focus:outline-none"
+          classNames={{
+            menu: () =>
+              "bg-primary dark:bg-darkprimary text-text dark:text-darktext backdrop-blur-md rounded-lg shadow-lg border-2 border-button",
+            option: ({ isFocused, isSelected }) =>
+              `px-3 py-2 cursor-pointer
+       ${isSelected ? "bg-button text-text dark:text-darktext" : ""}
+       ${
+         isFocused && !isSelected
+           ? "bg-button text-text dark:text-darktext"
+           : ""
+       }`,
+            control: () =>
+              "bg-primary dark:bg-darkprimary border-2 border-button rounded",
+          }}
         />
         <label>Tools</label>
         <CreatableSelect
@@ -190,13 +206,35 @@ const UpdateProjectForm = ({ projectId, onLoadingChange, onSuccess }) => {
           menuShouldScrollIntoView={false}
           closeMenuOnScroll={false}
           menuShouldBlockScroll={true}
+          menuPortalTarget={
+            typeof window !== "undefined" ? document.body : null
+          }
+          menuShouldScrollIntoView={false}
+          closeMenuOnScroll={false}
+          menuShouldBlockScroll={true}
           styles={{
             menuPortal: (base) => ({ ...base, zIndex: 9999 }),
+            control: (base, state) => ({
+              ...base,
+              boxShadow: "none", // hapus biru default
+              border: state.isFocused ? "2px solid #006400" : "2px solid grey", // hijau saat fokus
+              "&:hover": "none",
+            }),
           }}
-          className="w-full p-2 mb-4 rounded text-text dark:text-darktext
-             border-2 border-gray-400 dark:border-gray-600 
-             focus:border-button focus:ring-2 focus:ring-button 
-             focus:outline-none"
+          classNames={{
+            menu: () =>
+              "bg-primary dark:bg-darkprimary text-text dark:text-darktext backdrop-blur-md rounded-lg shadow-lg border-2 border-button",
+            option: ({ isFocused, isSelected }) =>
+              `px-3 py-2 cursor-pointer
+       ${isSelected ? "bg-button text-text dark:text-darktext" : ""}
+       ${
+         isFocused && !isSelected
+           ? "bg-button text-text dark:text-darktext"
+           : ""
+       }`,
+            control: () =>
+              "bg-primary dark:bg-darkprimary border-2 border-button rounded",
+          }}
         />
         <label>Deskripsi</label>
         <textarea
