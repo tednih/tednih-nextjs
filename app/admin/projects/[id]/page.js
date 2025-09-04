@@ -206,12 +206,6 @@ const UpdateProjectForm = ({ projectId, onLoadingChange, onSuccess }) => {
           menuShouldScrollIntoView={false}
           closeMenuOnScroll={false}
           menuShouldBlockScroll={true}
-          menuPortalTarget={
-            typeof window !== "undefined" ? document.body : null
-          }
-          menuShouldScrollIntoView={false}
-          closeMenuOnScroll={false}
-          menuShouldBlockScroll={true}
           styles={{
             menuPortal: (base) => ({ ...base, zIndex: 9999 }),
             control: (base, state) => ({
