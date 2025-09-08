@@ -101,6 +101,12 @@ function Navbar() {
             >
               Blogs
             </Link>
+            <Link
+              className="text-text dark:text-darktext relative font-medium before:absolute before:-bottom-1 before:h-0.5 before:w-full before:origin-right before:scale-x-0 before:bg-darkprimary dark:before:bg-primary before:transition hover:before:scale-100"
+              href="/chatAI"
+            >
+              Chat AI ⭐
+            </Link>
           </nav>
           <div className="animate__animated animate__shakeY flex-1 items-center justify-end gap-4 flex z-30">
             <DarkMode />
@@ -163,7 +169,7 @@ function Navbar() {
                 >
                   {/* bagian atas nav */}
                   <ul className="text-center mt-8">
-                    <li className="mb-8">
+                    <li className="mb-6">
                       <Link
                         className="text-text dark:text-darktext relative font-medium before:absolute before:-bottom-1 before:h-0.5 before:w-full before:origin-right before:scale-x-0 before:bg-darkprimary dark:before:bg-primary before:transition hover:before:scale-100"
                         href="/"
@@ -171,7 +177,7 @@ function Navbar() {
                         Home
                       </Link>
                     </li>
-                    <li className="mb-8">
+                    <li className="mb-6">
                       <Link
                         className="text-text dark:text-darktext relative font-medium before:absolute before:-bottom-1 before:h-0.5 before:w-full before:origin-right before:scale-x-0 before:bg-darkprimary dark:before:bg-primary before:transition hover:before:scale-100"
                         href="/projects"
@@ -179,7 +185,7 @@ function Navbar() {
                         Projects
                       </Link>
                     </li>
-                    <li className="mb-8">
+                    <li className="mb-6">
                       <Link
                         className="text-text dark:text-darktext relative font-medium before:absolute before:-bottom-1 before:h-0.5 before:w-full before:origin-right before:scale-x-0 before:bg-darkprimary dark:before:bg-primary before:transition hover:before:scale-100"
                         href="/about"
@@ -187,13 +193,22 @@ function Navbar() {
                         About
                       </Link>
                     </li>
-                    <li className="mb-8">
+                    <li className="mb-6">
                       <Link
                         className="text-text dark:text-darktext relative font-medium before:absolute before:-bottom-1 before:h-0.5 before:w-full before:origin-right before:scale-x-0 before:bg-darkprimary dark:before:bg-primary before:transition hover:before:scale-100"
                         href="/blogs"
                       >
                         Blogs
                       </Link>
+                    </li>
+                    <li className="mb-6">
+                      <Link
+                        className="text-text dark:text-darktext relative font-medium before:absolute before:-bottom-1 before:h-0.5 before:w-full before:origin-right before:scale-x-0 before:bg-darkprimary dark:before:bg-primary before:transition hover:before:scale-100"
+                        href="/chatAI"
+                      >
+                        Chat AI{" "}
+                      </Link>
+                      ⭐
                     </li>
                   </ul>
                   {/* bagian tengah nav */}
