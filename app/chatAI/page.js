@@ -2,6 +2,7 @@
 import React, { useState, useRef } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { UploadIcon, RefreshIcon } from "@heroicons/react/solid";
+import ReactMarkdown from "react-markdown";
 
 function GeminiChat() {
   const [prompt, setPrompt] = useState("");
@@ -165,7 +166,9 @@ function GeminiChat() {
         {responseText && (
           <div className="mb-4 whitespace-pre-line text-justify">
             💬 AI Answer:
-            <p>{responseText}</p>
+            <p>
+              <ReactMarkdown>{responseText}</ReactMarkdown>
+            </p>
           </div>
         )}
 
