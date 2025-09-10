@@ -166,9 +166,7 @@ function GeminiChat() {
         {responseText && (
           <div className="mb-4 whitespace-pre-line text-justify">
             💬 AI Answer:
-            <p>
-              <ReactMarkdown>{responseText}</ReactMarkdown>
-            </p>
+            <ReactMarkdown>{responseText}</ReactMarkdown>
           </div>
         )}
 
