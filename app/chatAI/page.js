@@ -188,11 +188,11 @@ function GeminiChat() {
         <p className="text-sm border-t-2 py-2 mt-4 border-text dark:border-darktext">
           Made using{" "}
           <a
-            href="https://ai.google.dev/gemini-api/docs/models#gemini-2.5-flash-image-preview"
+            href="https://ai.google.dev/gemini-api/docs/models#gemini-2.5-flash-lite"
             target="_blank"
             className="underline"
           >
-            Gemini 2.5 Flash Image Preview
+            Gemini 2.5 Flash-Lite
           </a>
         </p>
       </div>
