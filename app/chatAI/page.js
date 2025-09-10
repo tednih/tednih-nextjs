@@ -13,7 +13,8 @@ function GeminiChat() {
 
   const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GEMINI_API_KEY);
   const model = genAI.getGenerativeModel({
-    model: "gemini-2.5-flash-image-preview",
+    // model: "gemini-2.5-flash-image-preview",
+    model: "models/gemini-2.5-flash-lite",
   });
 
   // 🔹 Handle file input
