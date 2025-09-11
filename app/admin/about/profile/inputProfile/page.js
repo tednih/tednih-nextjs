@@ -51,7 +51,7 @@ export default function ProfileForm() {
       <label>Nama</label>
       <input
         type="text"
-        className="w-full p-2 mb-4 rounded border-2 border-gray-400 dark:border-gray-600 focus:border-button focus:ring-2 focus:ring-button focus:outline-none"
+        className="w-full p-2 mb-4 rounded border-2 border-gray-400 dark:border-gray-600 focus:border-button focus:ring-2 focus:ring-button dark:focus:ring-darkbutton focus:outline-none"
         value={nama}
         onChange={(e) => setNama(e.target.value)}
         placeholder="Dimas Tedi S"
@@ -60,7 +60,7 @@ export default function ProfileForm() {
 
       <label>Deskripsi</label>
       <textarea
-        className="w-full p-2 mb-4 rounded border-2 border-gray-400 dark:border-gray-600 focus:border-button focus:ring-2 focus:ring-button focus:outline-none"
+        className="w-full p-2 mb-4 rounded border-2 border-gray-400 dark:border-gray-600 focus:border-button focus:ring-2 focus:ring-button dark:focus:ring-darkbutton focus:outline-none"
         value={deskripsi}
         onChange={(e) => setDeskripsi(e.target.value)}
         placeholder="Deskripsi"
@@ -71,7 +71,7 @@ export default function ProfileForm() {
       <label>Username</label>
       <input
         type="text"
-        className="w-full p-2 mb-4 rounded border-2 border-gray-400 dark:border-gray-600 focus:border-button focus:ring-2 focus:ring-button focus:outline-none"
+        className="w-full p-2 mb-4 rounded border-2 border-gray-400 dark:border-gray-600 focus:border-button focus:ring-2 focus:ring-button dark:focus:ring-darkbutton focus:outline-none"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
         placeholder="Username"
@@ -81,7 +81,7 @@ export default function ProfileForm() {
       <label>Password</label>
       <input
         type="password"
-        className="w-full p-2 mb-4 rounded border-2 border-gray-400 dark:border-gray-600 focus:border-button focus:ring-2 focus:ring-button focus:outline-none"
+        className="w-full p-2 mb-4 rounded border-2 border-gray-400 dark:border-gray-600 focus:border-button focus:ring-2 focus:ring-button dark:focus:ring-darkbutton focus:outline-none"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         placeholder="Password"
@@ -91,7 +91,7 @@ export default function ProfileForm() {
       <label>Foto Profile</label>
       <input
         type="file"
-        className="w-full p-2 mb-4 rounded border-2 border-gray-400 dark:border-gray-600 focus:border-button focus:ring-2 focus:ring-button focus:outline-none"
+        className="w-full p-2 mb-4 rounded border-2 border-gray-400 dark:border-gray-600 focus:border-button focus:ring-2 focus:ring-button dark:focus:ring-darkbutton focus:outline-none"
         value={foto}
         accept="image/*"
         ref={fileRef}
@@ -102,7 +102,7 @@ export default function ProfileForm() {
       <button
         type="submit"
         disabled={loading}
-        className="w-full bg-button hover:bg-button/60 text-text dark:text-darktext font-semibold py-2 px-4 rounded transition disabled:opacity-50"
+        className="w-full bg-button dark:bg-darkbutton hover:bg-button/60 hover:dark:bg-darkbutton/60 text-text dark:text-darktext font-semibold py-2 px-4 rounded transition disabled:opacity-50"
       >
         {loading ? "Menyimpan..." : "Simpan Profile"}
       </button>

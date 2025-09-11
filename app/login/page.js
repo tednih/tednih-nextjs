@@ -48,7 +48,7 @@ export default function LoginPage() {
           onChange={(e) => setUser({ ...user, username: e.target.value })}
           className="w-full p-2 mb-4 rounded 
              border-2 border-gray-400 dark:border-gray-600 
-             focus:border-button focus:ring-2 focus:ring-button 
+             focus:border-button focus:ring-2 focus:ring-button dark:focus:ring-darkbutton 
              focus:outline-none"
           required
         />
@@ -61,14 +61,14 @@ export default function LoginPage() {
           onChange={(e) => setUser({ ...user, password: e.target.value })}
           className="w-full p-2 mb-4 rounded 
              border-2 border-gray-400 dark:border-gray-600 
-             focus:border-button focus:ring-2 focus:ring-button 
+             focus:border-button focus:ring-2 focus:ring-button dark:focus:ring-darkbutton 
              focus:outline-none"
           required
         />
 
         <button
           type="submit"
-          className="w-full bg-button dark:text-darktext py-2 rounded hover:bg-button/60"
+          className="w-full bg-button dark:bg-darkbutton dark:text-darktext py-2 rounded hover:bg-button/60 hover:dark:bg-darkbutton/60"
         >
           Login
         </button>

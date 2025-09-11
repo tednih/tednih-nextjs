@@ -55,7 +55,7 @@ export default function BlogForm({ onSuccess }) {
         type="text"
         className="w-full p-2 mb-4 rounded 
              border-2 border-gray-400 dark:border-gray-600 
-             focus:border-button focus:ring-2 focus:ring-button 
+             focus:border-button focus:ring-2 focus:ring-button dark:focus:ring-darkbutton 
              focus:outline-none"
         value={judul}
         onChange={(e) => setJudul(e.target.value)}
@@ -68,7 +68,7 @@ export default function BlogForm({ onSuccess }) {
         type="date"
         className="w-full p-2 mb-4 rounded 
              border-2 border-gray-400 dark:border-gray-600 
-             focus:border-button focus:ring-2 focus:ring-button 
+             focus:border-button focus:ring-2 focus:ring-button dark:focus:ring-darkbutton 
              focus:outline-none"
         value={tanggal}
         onChange={(e) => setTanggal(e.target.value)}
@@ -80,7 +80,7 @@ export default function BlogForm({ onSuccess }) {
       <textarea
         className="w-full p-2 mb-4 rounded 
              border-2 border-gray-400 dark:border-gray-600 
-             focus:border-button focus:ring-2 focus:ring-button 
+             focus:border-button focus:ring-2 focus:ring-button dark:focus:ring-darkbutton 
              focus:outline-none"
         value={deskripsi}
         onChange={(e) => setDeskripsi(e.target.value)}
@@ -99,14 +99,14 @@ export default function BlogForm({ onSuccess }) {
         ref={inputRef} // untuk clear form input foto
         className="w-full p-2 mb-4 rounded 
              border-2 border-gray-400 dark:border-gray-600 
-             focus:border-button focus:ring-2 focus:ring-button 
+             focus:border-button focus:ring-2 focus:ring-button dark:focus:ring-darkbutton 
              focus:outline-none"
       />
 
       <button
         type="submit"
         disabled={loading}
-        className="w-full bg-button hover:bg-button/60 text-text dark:text-darktext font-semibold py-2 px-4 rounded transition disabled:opacity-50"
+        className="w-full bg-button dark:bg-darkbutton hover:bg-button/60 hover:dark:bg-darkbutton/60 text-text dark:text-darktext font-semibold py-2 px-4 rounded transition disabled:opacity-50"
       >
         {loading ? "Menyimpan..." : "Simpan Blog"}
       </button>

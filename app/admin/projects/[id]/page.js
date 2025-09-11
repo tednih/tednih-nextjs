@@ -127,7 +127,7 @@ const UpdateProjectForm = ({ projectId, onLoadingChange, onSuccess }) => {
           onChange={(e) => setJudul(e.target.value)}
           className="w-full p-2 mb-4 rounded 
           border-2 border-gray-400 dark:border-gray-600 
-             focus:border-button focus:ring-2 focus:ring-button 
+             focus:border-button focus:ring-2 focus:ring-button dark:focus:ring-darkbutton 
              focus:outline-none"
           readOnly={isLoading}
           required
@@ -139,7 +139,7 @@ const UpdateProjectForm = ({ projectId, onLoadingChange, onSuccess }) => {
           onChange={(e) => setTanggal(e.target.value)}
           className="w-full p-2 mb-4 rounded 
           border-2 border-gray-400 dark:border-gray-600 
-             focus:border-button focus:ring-2 focus:ring-button 
+             focus:border-button focus:ring-2 focus:ring-button dark:focus:ring-darkbutton 
              focus:outline-none"
           readOnly={isLoading}
           required
@@ -152,7 +152,7 @@ const UpdateProjectForm = ({ projectId, onLoadingChange, onSuccess }) => {
           onChange={(e) => setLink(e.target.value)}
           className="w-full p-2 mb-4 rounded 
           border-2 border-gray-400 dark:border-gray-600 
-             focus:border-button focus:ring-2 focus:ring-button 
+             focus:border-button focus:ring-2 focus:ring-button dark:focus:ring-darkbutton 
              focus:outline-none"
           readOnly={isLoading}
         />
@@ -183,10 +183,14 @@ const UpdateProjectForm = ({ projectId, onLoadingChange, onSuccess }) => {
               "bg-primary dark:bg-darkprimary text-text dark:text-darktext backdrop-blur-md rounded-lg shadow-lg border-2 border-button",
             option: ({ isFocused, isSelected }) =>
               `px-3 py-2 cursor-pointer
-       ${isSelected ? "bg-button text-text dark:text-darktext" : ""}
+       ${
+         isSelected
+           ? "bg-button dark:bg-darkbutton text-text dark:text-darktext"
+           : ""
+       }
        ${
          isFocused && !isSelected
-           ? "bg-button text-text dark:text-darktext"
+           ? "bg-button dark:bg-darkbutton text-text dark:text-darktext"
            : ""
        }`,
             control: () =>
@@ -220,10 +224,14 @@ const UpdateProjectForm = ({ projectId, onLoadingChange, onSuccess }) => {
               "bg-primary dark:bg-darkprimary text-text dark:text-darktext backdrop-blur-md rounded-lg shadow-lg border-2 border-button",
             option: ({ isFocused, isSelected }) =>
               `px-3 py-2 cursor-pointer
-       ${isSelected ? "bg-button text-text dark:text-darktext" : ""}
+       ${
+         isSelected
+           ? "bg-button dark:bg-darkbutton text-text dark:text-darktext"
+           : ""
+       }
        ${
          isFocused && !isSelected
-           ? "bg-button text-text dark:text-darktext"
+           ? "bg-button dark:bg-darkbutton text-text dark:text-darktext"
            : ""
        }`,
             control: () =>
@@ -237,7 +245,7 @@ const UpdateProjectForm = ({ projectId, onLoadingChange, onSuccess }) => {
           onChange={(e) => setDeskripsi(e.target.value)}
           className="w-full p-2 mb-4 rounded 
           border-2 border-gray-400 dark:border-gray-600 
-             focus:border-button focus:ring-2 focus:ring-button 
+             focus:border-button focus:ring-2 focus:ring-button dark:focus:ring-darkbutton 
              focus:outline-none"
           readOnly={isLoading}
           rows={4}
@@ -282,7 +290,7 @@ const UpdateProjectForm = ({ projectId, onLoadingChange, onSuccess }) => {
         <div className="flex justify-between">
           <button
             type="submit"
-            className="bg-button text-text dark:text-darktext px-4 py-2 rounded hover:bg-button/60"
+            className="bg-button dark:bg-darkbutton text-text dark:text-darktext px-4 py-2 rounded hover:bg-button/60"
           >
             Update Project
           </button>

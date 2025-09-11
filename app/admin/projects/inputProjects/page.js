@@ -102,7 +102,7 @@ export default function ProjectForm({ onSuccess }) {
         placeholder="Judul Project"
         value={judul}
         onChange={(e) => setJudul(e.target.value)}
-        className="w-full p-2 mb-4 rounded border-2 border-gray-400 dark:border-gray-600 focus:border-button focus:ring-2 focus:ring-button focus:outline-none"
+        className="w-full p-2 mb-4 rounded border-2 border-gray-400 dark:border-gray-600 focus:border-button focus:ring-2 focus:ring-button dark:focus:ring-darkbutton focus:outline-none"
       />
 
       <label>Tanggal</label>
@@ -110,7 +110,7 @@ export default function ProjectForm({ onSuccess }) {
         type="date"
         value={tanggal}
         onChange={(e) => setTanggal(e.target.value)}
-        className="w-full p-2 mb-4 rounded border-2 border-gray-400 dark:border-gray-600 focus:border-button focus:ring-2 focus:ring-button focus:outline-none"
+        className="w-full p-2 mb-4 rounded border-2 border-gray-400 dark:border-gray-600 focus:border-button focus:ring-2 focus:ring-button dark:focus:ring-darkbutton focus:outline-none"
       />
 
       <label>Url</label>
@@ -119,7 +119,7 @@ export default function ProjectForm({ onSuccess }) {
         placeholder="Link Project"
         value={link}
         onChange={(e) => setLink(e.target.value)}
-        className="w-full p-2 mb-4 rounded border-2 border-gray-400 dark:border-gray-600 focus:border-button focus:ring-2 focus:ring-button focus:outline-none"
+        className="w-full p-2 mb-4 rounded border-2 border-gray-400 dark:border-gray-600 focus:border-button focus:ring-2 focus:ring-button dark:focus:ring-darkbutton focus:outline-none"
       />
 
       {/* Bahasa multiselect */}
@@ -132,7 +132,7 @@ export default function ProjectForm({ onSuccess }) {
           onChange={setSelectedBahasa}
           className="w-full mb-4 rounded text-text dark:text-darktext
              border-2 border-gray-400 dark:border-gray-600 
-             focus:border-button focus:ring-2 focus:ring-button 
+             focus:border-button focus:ring-2 focus:ring-button dark:focus:ring-darkbutton 
              focus:outline-none"
         />
         <input
@@ -140,7 +140,7 @@ export default function ProjectForm({ onSuccess }) {
           placeholder="Bahasa baru (opsional) Pakai , (jika lebih dari 1)"
           value={customBahasa}
           onChange={(e) => setCustomBahasa(e.target.value)}
-          className="w-full p-2 rounded border-2 border-gray-400 dark:border-gray-600 focus:border-button focus:ring-2 focus:ring-button focus:outline-none"
+          className="w-full p-2 rounded border-2 border-gray-400 dark:border-gray-600 focus:border-button focus:ring-2 focus:ring-button dark:focus:ring-darkbutton focus:outline-none"
         />
       </div>
 
@@ -152,14 +152,14 @@ export default function ProjectForm({ onSuccess }) {
           options={toolsOptions}
           value={selectedTools}
           onChange={setSelectedTools}
-          className="w-full mb-4 rounded text-text dark:text-darktext border-2 border-gray-400 dark:border-gray-600 focus:border-button focus:ring-2 focus:ring-button focus:outline-none"
+          className="w-full mb-4 rounded text-text dark:text-darktext border-2 border-gray-400 dark:border-gray-600 focus:border-button focus:ring-2 focus:ring-button dark:focus:ring-darkbutton focus:outline-none"
         />
         <input
           type="text"
           placeholder="Bahasa baru (opsional) Pakai , (jika lebih dari 1)"
           value={customTools}
           onChange={(e) => setCustomTools(e.target.value)}
-          className="w-full p-2 rounded border-2 border-gray-400 dark:border-gray-600 focus:border-button focus:ring-2 focus:ring-button focus:outline-none"
+          className="w-full p-2 rounded border-2 border-gray-400 dark:border-gray-600 focus:border-button focus:ring-2 focus:ring-button dark:focus:ring-darkbutton focus:outline-none"
         />
       </div>
 
@@ -168,7 +168,7 @@ export default function ProjectForm({ onSuccess }) {
         placeholder="Deskripsi Project"
         value={deskripsi}
         onChange={(e) => setDeskripsi(e.target.value)}
-        className="w-full p-2 mb-4 rounded border-2 border-gray-400 dark:border-gray-600 focus:border-button focus:ring-2 focus:ring-button focus:outline-none"
+        className="w-full p-2 mb-4 rounded border-2 border-gray-400 dark:border-gray-600 focus:border-button focus:ring-2 focus:ring-button dark:focus:ring-darkbutton focus:outline-none"
         required
         rows={5}
       />
@@ -182,12 +182,12 @@ export default function ProjectForm({ onSuccess }) {
           setFiles([...e.target.files]); // ← ini mengisi state files
         }}
         ref={inputRef} // untuk clear form input foto
-        className="w-full p-2 mb-4 rounded border-2 border-gray-400 dark:border-gray-600 focus:border-button focus:ring-2 focus:ring-button focus:outline-none"
+        className="w-full p-2 mb-4 rounded border-2 border-gray-400 dark:border-gray-600 focus:border-button focus:ring-2 focus:ring-button dark:focus:ring-darkbutton focus:outline-none"
       />
 
       <button
         type="submit"
-        className="bg-button text-text dark:text-darktext px-4 py-2 rounded hover:bg-button/60"
+        className="bg-button dark:bg-darkbutton text-text dark:text-darktext px-4 py-2 rounded hover:bg-button/60"
       >
         Add Project
       </button>

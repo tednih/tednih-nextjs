@@ -74,7 +74,7 @@ const CardBlogs = () => {
               {session ? (
                 <button
                   onClick={() => handleEdit(blog._id)} // panggil fungsi untuk buka form edit
-                  className="absolute top-2 right-2 bg-button hover:bg-button/90 p-1 rounded-full h-7 z-10"
+                  className="absolute top-2 right-2 bg-button dark:bg-darkbutton hover:bg-button/90 dark:hover:bg-darkbutton/90 p-1 rounded-full h-7 z-10"
                   title="Edit Project"
                 >
                   <PencilIcon className="h-5 w-5 text-primary dark:text-darkprimary" />
@@ -121,7 +121,7 @@ const CardBlogs = () => {
                 </div>
 
                 <div className="flex flex-col justify-between w-full z-10">
-                  <div className="border-s border-gray-900/10 p-4 dark:border-white/10 sm:!border-l-transparent sm:p-6">
+                  <div className="border-s border-text p-4 dark:border-darktext sm:!border-l-transparent sm:p-6">
                     <Link href={`/blogs/${blog._id}`}>
                       <h3 className="font-bold uppercase dark:text-primary text-darkprimary">
                         {blog.judul}
@@ -138,7 +138,7 @@ const CardBlogs = () => {
                   <div className="sm:flex sm:items-end sm:justify-end">
                     <Link
                       href={`/blogs/${blog._id}`}
-                      className="rounded-br-xl border bg-button/50 hover:bg-button border-primary dark:border-darkprimary block px-5 py-3 text-center text-xs font-bold uppercase text-text dark:text-darktext transition"
+                      className="rounded-br-xl border bg-button dark:bg-darkbutton/50 hover:bg-button border-primary dark:border-darkprimary block px-5 py-3 text-center text-xs font-bold uppercase text-text dark:text-darktext transition"
                     >
                       Read More
                     </Link>

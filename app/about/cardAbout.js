@@ -93,7 +93,7 @@ const CardAbout = () => {
         {session ? (
           <button
             onClick={() => handleEdit(profile._id)} // panggil fungsi untuk buka form edit
-            className="absolute top-0 right-0 bg-button hover:bg-button/90 p-1 rounded-full"
+            className="absolute top-0 right-0 bg-button dark:bg-darkbutton hover:bg-button/90 dark:hover:bg-darkbutton/90 p-1 rounded-full"
             title="Edit Profile"
           >
             <PencilIcon className="h-5 w-5 text-primary dark:text-darkprimary" />
@@ -117,7 +117,7 @@ const CardAbout = () => {
           {session ? (
             <button
               onClick={() => handleEdit(profile._id)} // panggil fungsi untuk buka form edit
-              className="absolute top-0 right-0 bg-button hover:bg-button/90 p-1 rounded-full"
+              className="absolute top-0 right-0 bg-button dark:bg-darkbutton hover:bg-button/90 dark:hover:bg-darkbutton/90 p-1 rounded-full"
               title="Edit Profile"
             >
               <PencilIcon className="h-5 w-5 text-primary dark:text-darkprimary" />
@@ -148,7 +148,7 @@ const CardAbout = () => {
                 {session ? (
                   <button
                     onClick={() => handleEditSkill(skill._id)} // panggil fungsi untuk buka form edit
-                    className="absolute top-0 right-0 bg-button hover:bg-button/90 p-1 rounded-full z-10"
+                    className="absolute top-0 right-0 bg-button dark:bg-darkbutton hover:bg-button/90 dark:hover:bg-darkbutton/90 p-1 rounded-full z-10"
                     title="Edit Skill"
                   >
                     <PencilIcon className="h-3 w-3 text-primary dark:text-darkprimary" />
@@ -161,7 +161,7 @@ const CardAbout = () => {
             {session ? (
               <button
                 onClick={() => setShowAddSkillForm(true)} // panggil fungsi untuk buka form add
-                className="absolute top-0 right-0 bg-button hover:bg-button/90 p-1 rounded-full"
+                className="absolute top-0 right-0 bg-button dark:bg-darkbutton hover:bg-button/90 dark:hover:bg-darkbutton/90 p-1 rounded-full"
                 title="Add Skill"
               >
                 <PlusIcon className="h-5 w-5 text-primary dark:text-darkprimary" />

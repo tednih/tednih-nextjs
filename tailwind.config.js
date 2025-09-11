@@ -22,7 +22,8 @@ module.exports = {
         darkstroke: "#010101",
 
         // Green
-        button: "#006400",
+        button: "#04a804",
+        darkbutton: "#006400",
       },
     },
     fontFamily: {
@@ -30,5 +31,5 @@ module.exports = {
       righteous: ["Righteous", "cursive"],
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };

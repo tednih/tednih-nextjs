@@ -5,6 +5,7 @@ import DarkMode from "./darkMode";
 import { MenuIcon, XIcon, LogoutIcon, LoginIcon } from "@heroicons/react/solid";
 import { signIn, signOut, useSession } from "next-auth/react";
 import { usePathname } from "next/navigation";
+import ScrollToTop from "./scrollToTop";
 
 function Navbar() {
   const { data: session, status, update } = useSession();
@@ -266,6 +267,7 @@ function Navbar() {
           </div>
         </div>
       </div>
+      <ScrollToTop className="h-5 w-5" />
     </header>
   );
 }

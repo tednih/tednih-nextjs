@@ -78,7 +78,7 @@ const UpdateProfileForm = ({ profileId, onLoadingChange, onSuccess }) => {
           onChange={(e) => setNama(e.target.value)}
           className="w-full p-2 mb-4 rounded 
              border-2 border-gray-400 dark:border-gray-600 
-             focus:border-button focus:ring-2 focus:ring-button 
+             focus:border-button focus:ring-2 focus:ring-button dark:focus:ring-darkbutton 
              focus:outline-none"
           readOnly={isLoading}
           required
@@ -90,7 +90,7 @@ const UpdateProfileForm = ({ profileId, onLoadingChange, onSuccess }) => {
           onChange={(e) => setDeskripsi(e.target.value)}
           className="w-full p-2 mb-4 rounded 
              border-2 border-gray-400 dark:border-gray-600 
-             focus:border-button focus:ring-2 focus:ring-button 
+             focus:border-button focus:ring-2 focus:ring-button dark:focus:ring-darkbutton 
              focus:outline-none"
           readOnly={isLoading}
           placeholder="Deskripsi Profile"
@@ -106,7 +106,7 @@ const UpdateProfileForm = ({ profileId, onLoadingChange, onSuccess }) => {
             onChange={(e) => setUsername(e.target.value)}
             className="w-full p-2 mb-4 rounded 
              border-2 border-gray-400 dark:border-gray-600 
-             focus:border-button focus:ring-2 focus:ring-button 
+             focus:border-button focus:ring-2 focus:ring-button dark:focus:ring-darkbutton 
              focus:outline-none"
             readOnly={isLoading}
             placeholder="Username"
@@ -120,7 +120,7 @@ const UpdateProfileForm = ({ profileId, onLoadingChange, onSuccess }) => {
             onChange={(e) => setPassword(e.target.value)}
             className="w-full p-2 mb-4 rounded 
              border-2 border-gray-400 dark:border-gray-600 
-             focus:border-button focus:ring-2 focus:ring-button 
+             focus:border-button focus:ring-2 focus:ring-button dark:focus:ring-darkbutton 
              focus:outline-none"
             readOnly={isLoading}
             placeholder="Password"
@@ -181,7 +181,7 @@ const UpdateProfileForm = ({ profileId, onLoadingChange, onSuccess }) => {
         <div className="flex justify-between">
           <button
             type="submit"
-            className="bg-button text-text dark:text-darktext px-4 py-2 rounded hover:bg-button/60"
+            className="bg-button dark:bg-darkbutton text-text dark:text-darktext px-4 py-2 rounded hover:bg-button/60"
           >
             Update Profile
           </button>

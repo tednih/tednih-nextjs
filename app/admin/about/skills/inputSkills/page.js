@@ -42,7 +42,7 @@ export default function SkillForm({ onSuccess }) {
       <label>Nama</label>
       <input
         type="text"
-        className="w-full p-2 mb-4 rounded border-2 border-gray-400 dark:border-gray-600 focus:border-button focus:ring-2 focus:ring-button focus:outline-none"
+        className="w-full p-2 mb-4 rounded border-2 border-gray-400 dark:border-gray-600 focus:border-button focus:ring-2 focus:ring-button dark:focus:ring-darkbutton focus:outline-none"
         value={name}
         onChange={(e) => setName(e.target.value)}
         placeholder="Nama Skills"
@@ -52,7 +52,7 @@ export default function SkillForm({ onSuccess }) {
         <label>Icon</label>
         <input
           type="text"
-          className="w-full p-2 mb-4 rounded border-2 border-gray-400 dark:border-gray-600 focus:border-button focus:ring-2 focus:ring-button focus:outline-none"
+          className="w-full p-2 mb-4 rounded border-2 border-gray-400 dark:border-gray-600 focus:border-button focus:ring-2 focus:ring-button dark:focus:ring-darkbutton focus:outline-none"
           value={iconSlug}
           onChange={(e) => setIconSlug(e.target.value)}
           placeholder="Contoh: material-icon-theme:react"
@@ -73,7 +73,7 @@ export default function SkillForm({ onSuccess }) {
       <button
         type="submit"
         disabled={loading}
-        className="w-full bg-button hover:bg-button/60 text-text dark:text-darktext font-semibold py-2 px-4 rounded transition disabled:opacity-50"
+        className="w-full bg-button dark:bg-darkbutton hover:bg-button/60 hover:dark:bg-darkbutton/60 text-text dark:text-darktext font-semibold py-2 px-4 rounded transition disabled:opacity-50"
       >
         {loading ? "Menyimpan..." : "Simpan Skill"}
       </button>

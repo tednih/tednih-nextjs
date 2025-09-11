@@ -74,7 +74,7 @@ const UpdateSkillForm = ({ skillId, onLoadingChange, onSuccess }) => {
           onChange={(e) => setName(e.target.value)}
           className="w-full p-2 mb-4 rounded 
                border-2 border-gray-400 dark:border-gray-600 
-               focus:border-button focus:ring-2 focus:ring-button 
+               focus:border-button focus:ring-2 focus:ring-button dark:focus:ring-darkbutton 
                focus:outline-none"
           readOnly={isLoading}
           required
@@ -87,7 +87,7 @@ const UpdateSkillForm = ({ skillId, onLoadingChange, onSuccess }) => {
           onChange={(e) => setIcon(e.target.value)}
           className="w-full p-2 mb-4 rounded 
                border-2 border-gray-400 dark:border-gray-600 
-               focus:border-button focus:ring-2 focus:ring-button 
+               focus:border-button focus:ring-2 focus:ring-button dark:focus:ring-darkbutton 
                focus:outline-none"
           readOnly={isLoading}
           required
@@ -96,7 +96,7 @@ const UpdateSkillForm = ({ skillId, onLoadingChange, onSuccess }) => {
         <div className="flex justify-between">
           <button
             type="submit"
-            className="bg-button text-text dark:text-darktext px-4 py-2 rounded hover:bg-button/60"
+            className="bg-button dark:bg-darkbutton text-text dark:text-darktext px-4 py-2 rounded hover:bg-button/60"
           >
             Update Skill
           </button>
