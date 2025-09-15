@@ -59,96 +59,99 @@ const CardBlogs = () => {
     }
   }, [isSuccess]);
 
+  if (isLoading) {
+    return (
+      <div className="flex justify-center items-center h-screen text-text dark:text-darktext">
+        Loading...
+      </div>
+    );
+  }
   return (
     <div className="flex flex-col lg:max-w-[800px] md:max-w-[600px] max-w-[430px] m-auto rounded-xl lg:grid-cols-2 gap-4 w-full h-full items-center">
       {isSubmitting && <></>}
-      {isLoading ? (
-        <div>Loading...</div>
-      ) : (
-        blogs.map((blog) => {
-          return (
-            <article
-              className="relative flex w-auto p-4 rounded-lg"
-              key={blog._id}
-            >
-              {session ? (
-                <button
-                  onClick={() => handleEdit(blog._id)} // panggil fungsi untuk buka form edit
-                  className="absolute top-2 right-2 bg-button dark:bg-darkbutton hover:bg-button/90 dark:hover:bg-darkbutton/90 p-1 rounded-full h-7 z-10"
-                  title="Edit Project"
+      {blogs.map((blog) => {
+        return (
+          <article
+            className="relative flex w-auto p-4 rounded-lg"
+            key={blog._id}
+          >
+            {session ? (
+              <button
+                onClick={() => handleEdit(blog._id)} // panggil fungsi untuk buka form edit
+                className="absolute top-2 right-2 bg-button dark:bg-darkbutton hover:bg-button/90 dark:hover:bg-darkbutton/90 p-1 rounded-full h-7 z-10"
+                title="Edit Project"
+              >
+                <PencilIcon className="h-5 w-5 text-primary dark:text-darkprimary" />
+              </button>
+            ) : (
+              <></>
+            )}
+            <div className="flex animate-background m-auto card-glass mb-4">
+              <div className="absolute inset-0 md:hidden">
+                <img
+                  alt={blog.judul}
+                  src={blog.foto?.[0]}
+                  className="w-full h-full object-cover rounded-xl"
+                />
+                <div className="absolute inset-0 bg-primary/60 dark:bg-darkprimary/60 rounded-xl"></div>
+              </div>
+              <div className="border-l z-10 border-primary dark:border-darkprimary rotate-180 p-2 [writing-mode:_vertical-lr]">
+                <time
+                  dateTime={blog.tanggal}
+                  className="flex items-center justify-between gap-4 text-xs font-bold uppercase dark:text-primary text-darkprimary"
                 >
-                  <PencilIcon className="h-5 w-5 text-primary dark:text-darkprimary" />
-                </button>
-              ) : (
-                <></>
-              )}
-              <div className="flex animate-background m-auto card-glass mb-4">
-                <div className="absolute inset-0 md:hidden">
-                  <img
-                    alt={blog.judul}
-                    src={blog.foto?.[0]}
-                    className="w-full h-full object-cover rounded-xl"
-                  />
-                  <div className="absolute inset-0 bg-primary/60 dark:bg-darkprimary/60 rounded-xl"></div>
+                  <span>
+                    {new Date(blog.tanggal).toLocaleDateString("id-ID", {
+                      year: "numeric",
+                    })}
+                  </span>
+                  <span className="w-px flex-1 bg-text dark:bg-darktext"></span>
+                  <span>
+                    {new Date(blog.tanggal).toLocaleDateString("id-ID", {
+                      day: "2-digit",
+                      month: "long",
+                    })}
+                  </span>
+                </time>
+              </div>
+
+              <div className="hidden md:block sm:basis-56">
+                <img
+                  alt={blog.judul}
+                  src={blog.foto?.[0]}
+                  className="h-full w-full object-cover"
+                  layout="responsive"
+                />
+              </div>
+
+              <div className="flex flex-col justify-between w-full z-10">
+                <div className="border-s border-text p-4 dark:border-darktext sm:!border-l-transparent sm:p-6">
+                  <Link href={`/blogs/${blog._id}`}>
+                    <h3 className="font-bold uppercase dark:text-primary text-darkprimary">
+                      {blog.judul}
+                    </h3>
+                  </Link>
+
+                  <p className="mt-2 line-clamp-3 text-sm/relaxed text-text dark:text-darktext">
+                    {blog.deskripsi.length > 200
+                      ? blog.deskripsi.slice(0, 200) + "..."
+                      : blog.deskripsi}
+                  </p>
                 </div>
-                <div className="border-l z-10 border-primary dark:border-darkprimary rotate-180 p-2 [writing-mode:_vertical-lr]">
-                  <time
-                    dateTime={blog.tanggal}
-                    className="flex items-center justify-between gap-4 text-xs font-bold uppercase dark:text-primary text-darkprimary"
+
+                <div className="sm:flex sm:items-end sm:justify-end">
+                  <Link
+                    href={`/blogs/${blog._id}`}
+                    className="rounded-br-xl border bg-button dark:bg-darkbutton/50 hover:bg-button border-primary dark:border-darkprimary block px-5 py-3 text-center text-xs font-bold uppercase text-text dark:text-darktext transition"
                   >
-                    <span>
-                      {new Date(blog.tanggal).toLocaleDateString("id-ID", {
-                        year: "numeric",
-                      })}
-                    </span>
-                    <span className="w-px flex-1 bg-text dark:bg-darktext"></span>
-                    <span>
-                      {new Date(blog.tanggal).toLocaleDateString("id-ID", {
-                        day: "2-digit",
-                        month: "long",
-                      })}
-                    </span>
-                  </time>
-                </div>
-
-                <div className="hidden md:block sm:basis-56">
-                  <img
-                    alt={blog.judul}
-                    src={blog.foto?.[0]}
-                    className="h-full w-full object-cover"
-                    layout="responsive"
-                  />
-                </div>
-
-                <div className="flex flex-col justify-between w-full z-10">
-                  <div className="border-s border-text p-4 dark:border-darktext sm:!border-l-transparent sm:p-6">
-                    <Link href={`/blogs/${blog._id}`}>
-                      <h3 className="font-bold uppercase dark:text-primary text-darkprimary">
-                        {blog.judul}
-                      </h3>
-                    </Link>
-
-                    <p className="mt-2 line-clamp-3 text-sm/relaxed text-text dark:text-darktext">
-                      {blog.deskripsi.length > 200
-                        ? blog.deskripsi.slice(0, 200) + "..."
-                        : blog.deskripsi}
-                    </p>
-                  </div>
-
-                  <div className="sm:flex sm:items-end sm:justify-end">
-                    <Link
-                      href={`/blogs/${blog._id}`}
-                      className="rounded-br-xl border bg-button dark:bg-darkbutton/50 hover:bg-button border-primary dark:border-darkprimary block px-5 py-3 text-center text-xs font-bold uppercase text-text dark:text-darktext transition"
-                    >
-                      Read More
-                    </Link>
-                  </div>
+                    Read More
+                  </Link>
                 </div>
               </div>
-            </article>
-          );
-        })
-      )}
+            </div>
+          </article>
+        );
+      })}
       {/* add button */}
       {session ? (
         <div

@@ -111,7 +111,7 @@ function GeminiChat() {
               }}
               placeholder="Enter your prompt"
               rows={1}
-              className="w-full py-2 px-3 bg-primary dark:bg-darkprimary resize-none overflow-hidden border border-1 border-button/80 dark:border-darkbutton/80  rounded focus:border-none focus:ring-2 focus:ring-button dark:focus:ring-darkbutton dark:focus:ring-darkbutton focus:outline-none"
+              className="w-full py-2 px-3 bg-primary dark:bg-darkprimary resize-none overflow-hidden border border-1 border-button/80 dark:border-darkbutton/80  rounded focus:border-none focus:ring-2 focus:ring-button dark:focus:ring-darkbutton focus:outline-none"
             />
             <input
               type="file"
@@ -121,7 +121,7 @@ function GeminiChat() {
               className="hidden"
               multiple
             />
-            <div className="bg-button dark:bg-darkbutton dark:bg-darkbutton rounded py-1">
+            <div className="bg-button dark:bg-darkbutton rounded py-1">
               <button
                 type="button"
                 onClick={() => fileInputRef.current.click()}
@@ -147,7 +147,7 @@ function GeminiChat() {
 
           <button
             type="submit"
-            className="bg-button dark:bg-darkbutton dark:bg-darkbutton text-text dark:text-darktext px-4 py-2 rounded"
+            className="bg-button dark:bg-darkbutton text-text dark:text-darktext px-4 py-2 rounded"
             disabled={isLoading}
           >
             {isLoading ? "Generating..." : "Ask AI!"}

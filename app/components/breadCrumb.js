@@ -8,23 +8,32 @@ import { useEffect, useState } from "react";
 export default function Breadcrumb() {
   const pathname = usePathname();
   const params = useParams();
-  const [projectTitle, setProjectTitle] = useState(null);
+  const [dynamicTitle, setDynamicTitle] = useState(null);
 
   const pathParts = pathname.split("/").filter(Boolean);
 
   useEffect(() => {
-    // Kalau ada params.id di URL, ambil judul dari API
-    if (params.id) {
-      fetch(`/api/projects/${params.id}`)
+    const resource = pathParts[0];
+    const idParam = Object.keys(params)[0]; // ex: "id" / "slug"
+    const entityId = params?.[idParam];
+
+    if (entityId && resource) {
+      // 🔄 fetch ulang setiap kali param berubah
+      fetch(`/api/${resource}/${entityId}`)
         .then((res) => res.json())
         .then((data) => {
-          if (data?.projects?.judul) {
-            setProjectTitle(data.projects.judul);
-          }
+          const item = data?.[resource];
+          const title = item?.judul || item?.title || item?.name || entityId;
+          setDynamicTitle(title);
         })
-        .catch((err) => console.error("Gagal ambil project:", err));
+        .catch((err) =>
+          console.error(`❌ Gagal fetch breadcrumb ${resource}:`, err)
+        );
+    } else {
+      // ⬅️ reset kalau tidak ada params.id (contoh balik ke /projects)
+      setDynamicTitle(null);
     }
-  }, [params.id]);
+  }, [pathname, params]); // dependensi refetch
 
   return (
     <nav className="flex mt-2 w-max px-2 py-1 text-xs text-text dark:text-darktext rounded-r-xl shadow-lg backdrop-blur-md bg-primary/50 dark:bg-darkprimary/50 border border-primary/60 dark:border-darkprimary/60 transition-opacity duration-200">
@@ -40,11 +49,13 @@ export default function Breadcrumb() {
         const href = "/" + pathParts.slice(0, index + 1).join("/");
         const isLast = index === pathParts.length - 1;
 
-        // Jika ini page project detail dan last item → pakai title
-        const label =
-          isLast && params.id && projectTitle
-            ? projectTitle
-            : part.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+        let label = part
+          .replace(/-/g, " ")
+          .replace(/\b\w/g, (c) => c.toUpperCase());
+
+        if (isLast && dynamicTitle) {
+          label = dynamicTitle;
+        }
 
         return (
           <div key={href} className="flex items-center">

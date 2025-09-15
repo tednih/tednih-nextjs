@@ -20,6 +20,7 @@ const CardAbout = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [skills, setSkills] = useState([]);
   const [profile, setProfile] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   const handleEdit = (id) => {
     setSelectedProfile(id);
@@ -55,6 +56,7 @@ const CardAbout = () => {
 
       setSkills(skillsData.skills);
       setProfile(profileData.profile[0]);
+      setIsLoading(false);
     } catch (err) {
       console.error("Gagal fetch data:", err);
     }
@@ -73,23 +75,29 @@ const CardAbout = () => {
       // setShowAddSkillForm(false);
       fetchData();
       setIsSuccess(false);
+      setIsLoading(false);
     }
   }, [isSuccess]);
+
+  if (isLoading) {
+    return (
+      <div className="flex justify-center items-center h-screen text-text dark:text-darktext">
+        Loading...
+      </div>
+    );
+  }
 
   return (
     <div className="lg:flex block justify-between m-auto sm:m-5 space-y-5 lg:space-y-0 xl:space-y-0">
       <div className="animate__animated animate__backInUp card-glass lg:max-w-[800px] md:max-w-[500px] max-w-[430px] m-auto items-center gap-4 p-10 ">
-        {profile ? (
-          <Image
-            alt=""
-            src={profile.foto}
-            width={300}
-            height={300}
-            className="w-full h-full object-cover sm:h-full rounded-xl"
-          />
-        ) : (
-          <p className="text-gray-400 italic">Loading...</p>
-        )}
+        <Image
+          alt=""
+          src={profile.foto}
+          width={300}
+          height={300}
+          className="w-full h-full object-cover sm:h-full rounded-xl"
+        />
+
         {session ? (
           <button
             onClick={() => handleEdit(profile._id)} // panggil fungsi untuk buka form edit
@@ -107,13 +115,11 @@ const CardAbout = () => {
           <h2 className="text-2xl font-bold text-text dark:text-darktext md:text-3xl">
             About Me
           </h2>
-          {profile ? (
-            <p className="text-text dark:text-gray-300 md:mt-4 md:block text-justify mt-3">
-              {profile.deskripsi}
-            </p>
-          ) : (
-            <p className="text-gray-400 italic">Loading...</p>
-          )}
+
+          <p className="text-text dark:text-gray-300 md:mt-4 md:block text-justify mt-3">
+            {profile.deskripsi}
+          </p>
+
           {session ? (
             <button
               onClick={() => handleEdit(profile._id)} // panggil fungsi untuk buka form edit
