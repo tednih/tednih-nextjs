@@ -159,81 +159,83 @@ const CardProjects = () => {
       <div className="lg:max-w-[800px] md:max-w-[600px] max-w-[430px] m-auto rounded-xl grid lg:grid-cols-2 gap-4 w-full h-full items-center">
         {isLoading
           ? Array.from({ length: 4 }).map((_, i) => <ProjectSkeleton key={i} />)
-          : filteredProjects.map((project) => (
-              <article
-                className="card-glass relative flex w-full m-auto mt-2 px-3 py-1 text-xs text-text dark:text-darktext"
-                key={project._id}
-              >
-                <div className="rounded-xl p-4 sm:p-6 h-96">
-                  {session ? (
-                    <button
-                      onClick={() => handleEdit(project._id)} // panggil fungsi untuk buka form edit
-                      className="absolute top-0 right-0 bg-button dark:bg-darkbutton hover:bg-button/90 dark:hover:bg-darkbutton/90 p-1 rounded-full"
-                      title="Edit Project"
-                    >
-                      <PencilIcon className="h-5 w-5 text-primary dark:text-darkprimary" />
-                    </button>
-                  ) : (
-                    <></>
-                  )}
-                  <Link href={`/projects/${project._id}`}>
-                    <img
-                      alt={project.judul}
-                      src={project.foto?.[0]}
-                      className="h-56 w-full rounded-md object-cover mb-2 cursor-pointer"
-                    />
-                  </Link>
-                  <time
-                    dateTime={project.tanggal}
-                    className="animate__animated animate__bounce block text-xs text-text dark:text-gray-400"
-                  >
-                    {new Date(project.tanggal).toLocaleDateString("id-ID", {
-                      day: "2-digit",
-                      month: "long",
-                      year: "numeric",
-                    })}
-                  </time>
-
-                  <span>
-                    <Link
-                      href={`/projects/${project._id}`}
-                      className="animate__animated animate__bounce mt-0.5 text-lg font-medium text-headline dark:text-darkheadline hover:underline"
-                    >
-                      {project.judul}
+          : [...filteredProjects]
+              .sort((a, b) => new Date(b.tanggal) - new Date(a.tanggal))
+              .map((project) => (
+                <article
+                  className="card-glass relative flex w-full m-auto mt-2 px-3 py-1 text-xs text-text dark:text-darktext"
+                  key={project._id}
+                >
+                  <div className="rounded-xl p-4 sm:p-6 h-96">
+                    {session ? (
+                      <button
+                        onClick={() => handleEdit(project._id)} // panggil fungsi untuk buka form edit
+                        className="absolute top-0 right-0 bg-button dark:bg-darkbutton hover:bg-button/90 dark:hover:bg-darkbutton/90 p-1 rounded-full"
+                        title="Edit Project"
+                      >
+                        <PencilIcon className="h-5 w-5 text-primary dark:text-darkprimary" />
+                      </button>
+                    ) : (
+                      <></>
+                    )}
+                    <Link href={`/projects/${project._id}`}>
+                      <img
+                        alt={project.judul}
+                        src={project.foto?.[0]}
+                        className="h-56 w-full rounded-md object-cover mb-2 cursor-pointer"
+                      />
                     </Link>
-                  </span>
-                  <div className="py-4 flex flex-wrap gap-2 border-t-text dark:border-t-darktext border-t-2 justify-center">
-                    {project.bahasa.map((bhsa) => {
-                      return (
-                        <span
-                          className="animate__animated animate__jackInTheBox cursor-pointer whitespace-nowrap rounded-full bg-violet-200 px-2.5 py-0.5 text-xs text-violet-600 dark:bg-violet-600 dark:text-violet-100 hover:bg-violet-300 hover:dark:bg-violet-500"
-                          key={bhsa}
-                          onClick={() =>
-                            setSelectedBahasa([...selectedBahasa, bhsa])
-                          }
-                        >
-                          {bhsa}
-                        </span>
-                      );
-                    })}
+                    <time
+                      dateTime={project.tanggal}
+                      className="animate__animated animate__bounce block text-xs text-text dark:text-gray-400"
+                    >
+                      {new Date(project.tanggal).toLocaleDateString("id-ID", {
+                        day: "2-digit",
+                        month: "long",
+                        year: "numeric",
+                      })}
+                    </time>
 
-                    {project.tools.map((tool) => {
-                      return (
-                        <span
-                          className="animate__animated animate__jackInTheBox cursor-pointer whitespace-nowrap rounded-full bg-green-200 px-2.5 py-0.5 text-xs text-green-600 dark:bg-green-600 dark:text-green-100 hover:bg-green-300 hover:dark:bg-green-500"
-                          key={tool}
-                          onClick={() =>
-                            setSelectedTool([...selectedTool, tool])
-                          }
-                        >
-                          {tool}
-                        </span>
-                      );
-                    })}
+                    <span>
+                      <Link
+                        href={`/projects/${project._id}`}
+                        className="animate__animated animate__bounce mt-0.5 text-lg font-medium text-headline dark:text-darkheadline hover:underline"
+                      >
+                        {project.judul}
+                      </Link>
+                    </span>
+                    <div className="py-4 flex flex-wrap gap-2 border-t-text dark:border-t-darktext border-t-2 justify-center">
+                      {project.bahasa.map((bhsa) => {
+                        return (
+                          <span
+                            className="animate__animated animate__jackInTheBox cursor-pointer whitespace-nowrap rounded-full bg-violet-200 px-2.5 py-0.5 text-xs text-violet-600 dark:bg-violet-600 dark:text-violet-100 hover:bg-violet-300 hover:dark:bg-violet-500"
+                            key={bhsa}
+                            onClick={() =>
+                              setSelectedBahasa([...selectedBahasa, bhsa])
+                            }
+                          >
+                            {bhsa}
+                          </span>
+                        );
+                      })}
+
+                      {project.tools.map((tool) => {
+                        return (
+                          <span
+                            className="animate__animated animate__jackInTheBox cursor-pointer whitespace-nowrap rounded-full bg-green-200 px-2.5 py-0.5 text-xs text-green-600 dark:bg-green-600 dark:text-green-100 hover:bg-green-300 hover:dark:bg-green-500"
+                            key={tool}
+                            onClick={() =>
+                              setSelectedTool([...selectedTool, tool])
+                            }
+                          >
+                            {tool}
+                          </span>
+                        );
+                      })}
+                    </div>
                   </div>
-                </div>
-              </article>
-            ))}
+                </article>
+              ))}
 
         {/* add button */}
         {session ? (
