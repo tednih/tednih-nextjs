@@ -6,6 +6,13 @@ import { loadFull } from "tsparticles";
 
 export default function ParticlesBackground() {
   const [theme, setTheme] = useState("light");
+  const particlesInit = useCallback(async (engine) => {
+    try {
+      await loadFull(engine);
+    } catch (error) {
+      console.error("Particles init failed:", error);
+    }
+  }, []);
 
   // Deteksi mode gelap/terang dari sistem (bisa nanti disambungkan ke toggle juga)
   useEffect(() => {
@@ -15,10 +22,6 @@ export default function ParticlesBackground() {
     const handler = (e) => setTheme(e.matches ? "dark" : "light");
     mediaQuery.addEventListener("change", handler);
     return () => mediaQuery.removeEventListener("change", handler);
-  }, []);
-
-  const particlesInit = useCallback(async (engine) => {
-    await loadFull(engine);
   }, []);
 
   // Warna dinamis berdasarkan tema
