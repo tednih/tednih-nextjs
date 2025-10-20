@@ -5,6 +5,7 @@ import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import { SessionProvider } from "next-auth/react";
 import Breadcrumb from "./components/breadCrumb";
+import ParticlesBackground from "./components/ParticlesBackground";
 
 export default function RootLayout({ children }) {
   return (
@@ -14,6 +15,7 @@ export default function RootLayout({ children }) {
           <SessionProvider>
             <Navbar />
             <main className="bg py-[55px]">
+              <ParticlesBackground />
               <div className="flex ml-6 py-5 text-center">
                 <Breadcrumb className="w-6 h-6" />
               </div>
