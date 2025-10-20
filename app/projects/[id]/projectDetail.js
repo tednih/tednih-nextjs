@@ -37,7 +37,7 @@ const DetailProjects = ({ project }) => {
 
   return (
     <div className="lg:max-w-[1440px] m-auto">
-      <section className="lg:grid lg:grid-cols-2 lg:items-center lg:py-20 gap-6">
+      <section className="items-center">
         {/* Konten Teks */}
         <div className="relative p-6 md:p-10 lg:px-14 lg:py-14">
           {/* Glass Effect Box */}
