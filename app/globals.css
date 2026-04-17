@@ -21,7 +21,6 @@
 
 html,
 body {
-  height: 100%;
   margin: auto;
   padding: 0;
   box-sizing: border-box;
@@ -37,11 +36,11 @@ body {
 .bg {
   position: relative;
   min-height: 100vh;
+  overflow: hidden;
   background: 
     linear-gradient(135deg, rgba(28, 240, 67, 0.15), rgba(43, 43, 43, 0.15)),
     url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='1440' height='2000' preserveAspectRatio='none' viewBox='0 0 1440 2000'%3e%3cg fill='none'%3e%3cpath d='M834.36 1129.66 a450.95 450.95 0 1 0 901.9 0 a450.95 450.95 0 1 0 -901.9 0z' fill='rgba(28%2c 240%2c 67%2c 0.35)'/%3e%3cpath d='M-4.48 120.29 a273.85 273.85 0 1 0 547.7 0 a273.85 273.85 0 1 0 -547.7 0z' fill='rgba(28%2c 240%2c 67%2c 0.35)'/%3e%3c/g%3e%3c/svg%3e");
   background-position: center;
-  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }

@@ -77,8 +77,8 @@ export default function ParticlesBackground() {
         },
         particles: {
           number: {
-            density: { enable: true, width: 1920, height: 1080 },
-            value: 100,
+            // density: { enable: true, width: 1920, height: 1080 },
+            value: 40,
           },
           color: { value: particleColor },
           links: {
@@ -102,16 +102,16 @@ export default function ParticlesBackground() {
               startValue: "random",
             },
           },
-          shape: { type: "circle" },
+          shape: { type: "star" },
           size: {
-            value: { min: 1, max: 10 },
+            value: { min: 3, max: 7 },
             animation: { enable: true, speed: 20, startValue: "random" },
           },
         },
         pauseOnBlur: true,
         pauseOnOutsideViewport: true,
       }}
-      className="absolute inset-0 -z-10"
+      className=""
     />
   );
 }
