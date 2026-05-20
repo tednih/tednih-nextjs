@@ -79,7 +79,7 @@ export default function ParticlesBackground() {
               duration: 0.4,
               factor: 100,
               speed: 1,
-              maxSpeed: 50,
+              maxSpeed: 10,
               easing: "ease-out-quad",
             },
           },
@@ -93,7 +93,7 @@ export default function ParticlesBackground() {
           links: {
             color: linkColor,
             distance: 150,
-            enable: true,
+            enable: false,
             opacity: 0.4,
             width: 1,
           },

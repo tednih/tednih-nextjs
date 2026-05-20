@@ -37,21 +37,78 @@ body {
   position: relative;
   min-height: 100vh;
   overflow: hidden;
-  background: 
-    linear-gradient(135deg, rgba(28, 240, 67, 0.15), rgba(43, 43, 43, 0.15)),
-    url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='1440' height='2000' preserveAspectRatio='none' viewBox='0 0 1440 2000'%3e%3cg fill='none'%3e%3cpath d='M834.36 1129.66 a450.95 450.95 0 1 0 901.9 0 a450.95 450.95 0 1 0 -901.9 0z' fill='rgba(28%2c 240%2c 67%2c 0.35)'/%3e%3cpath d='M-4.48 120.29 a273.85 273.85 0 1 0 547.7 0 a273.85 273.85 0 1 0 -547.7 0z' fill='rgba(28%2c 240%2c 67%2c 0.35)'/%3e%3c/g%3e%3c/svg%3e");
-  background-position: center;
+
+  background:
+    /* overlay glass */
+    linear-gradient(
+      135deg,
+      rgba(28, 240, 67, 0.08),
+      rgba(43, 43, 43, 0.12)
+    ),
+
+    /* FULL MOON TOP */
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(28, 240, 67, 0.55) 0%,
+      rgba(28, 240, 67, 0.35) 18%,
+      rgba(28, 240, 67, 0.12) 38%,
+      transparent 30%
+    ),
+
+    /* FULL MOON BOTTOM */
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(28, 240, 67, 0.45) 0%,
+      rgba(28, 240, 67, 0.2) 22%,
+      transparent 24%
+    ),
+
+    /* subtle dark background */
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.02),
+      rgba(0,0,0,0.03)
+    );
+
   background-repeat: no-repeat;
+  background-size: cover;
   background-attachment: fixed;
 }
 
+/* DARK MODE */
 .dark .bg {
-  background: 
-    linear-gradient(135deg, rgba(28, 240, 67, 0.1), rgba(15, 23, 42, 0.9)),
-    url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='1440' height='2000' preserveAspectRatio='none' viewBox='0 0 1440 2000'%3e%3cg fill='none'%3e%3cpath d='M834.36 1129.66 a450.95 450.95 0 1 0 901.9 0 a450.95 450.95 0 1 0 -901.9 0z' fill='rgba(28%2c 240%2c 67%2c 0.25)'/%3e%3cpath d='M-4.48 120.29 a273.85 273.85 0 1 0 547.7 0 a273.85 273.85 0 1 0 -547.7 0z' fill='rgba(28%2c 240%2c 67%2c 0.25)'/%3e%3c/g%3e%3c/svg%3e");
-  background-position: center;
-  background-size: cover;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(28, 240, 67, 0.06),
+      rgba(2, 6, 23, 0.95)
+    ),
+
+    /* glowing moon kanan */
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(28, 240, 67, 0.45) 0%,
+      rgba(28, 240, 67, 0.25) 16%,
+      rgba(28, 240, 67, 0.08) 34%,
+      transparent 30%
+    ),
+
+    /* glowing moon kiri */
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(28, 240, 67, 0.35) 0%,
+      rgba(28, 240, 67, 0.12) 22%,
+      transparent 24%
+    ),
+
+    linear-gradient(
+      180deg,
+      rgba(15,23,42,0.96),
+      rgba(2,6,23,1)
+    );
+
   background-repeat: no-repeat;
+  background-size: cover;
   background-attachment: fixed;
 }
 
