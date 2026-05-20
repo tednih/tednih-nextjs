@@ -40,6 +40,15 @@ export default function ParticlesBackground() {
         // },
         detectRetina: true,
         fpsLimit: 120,
+        fullScreen: {
+          enable: false,
+        },
+        canvas: {
+          style: {
+            width: "100%",
+            height: "100%",
+          },
+        },
         interactivity: {
           detectsOn: "window",
           events: {
@@ -111,7 +120,7 @@ export default function ParticlesBackground() {
         pauseOnBlur: true,
         pauseOnOutsideViewport: true,
       }}
-      className=""
+      className="w-full h-full"
     />
   );
 }

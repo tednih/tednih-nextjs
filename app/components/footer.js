@@ -5,12 +5,12 @@ const Footer = () => {
     <div className="">
       <footer
         aria-label="Site Footer"
-        className="bg-primary dark:bg-darkprimary mx-auto flex lg:max-w-[1440px] items-center justify-between p-0 m-0"
+        className="relative bottom-0 bg-primary dark:bg-darkprimary mx-auto flex lg:max-w-[1440px] w-full items-center justify-between p-0 m-0 z-10"
       >
-        <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-screen-xl px-4 py-4 sm:px-6 lg:px-8">
           <div className="flex justify-center sm:justify-start">
             <p className="mt-4 text-center text-sm text-text dark:text-darktext lg:mt-0">
-              Made using Next.js and Tailwind CSS. Hosted on Vercel.
+              Made using Next.js 13 and Tailwind CSS. Hosted on Vercel.
             </p>
           </div>
 

@@ -15,7 +15,9 @@ export default function RootLayout({ children }) {
           <SessionProvider>
             <Navbar />
             <main className="bg py-[55px]">
-              <ParticlesBackground />
+              <div className="absolute inset-0 z-0">
+                <ParticlesBackground />
+              </div>
               <div className="relative ml-6 py-5 text-center">
                 <Breadcrumb className="w-6 h-6" />
               </div>
