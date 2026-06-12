@@ -14,7 +14,8 @@ function GeminiChat() {
 
   const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GEMINI_API_KEY);
   const model = genAI.getGenerativeModel({
-    model: "models/gemini-2.5-flash-lite",
+    // model: "models/gemini-2.5-flash-lite",
+     model: "models/gemini-3.1-flash-lite",
   });
 
   // Handle file input
@@ -199,7 +200,7 @@ function GeminiChat() {
             rel="noopener noreferrer"
             className="underline"
           >
-            Gemini 2.5 Flash-Lite
+            Gemini 3.1 Flash-Lite
           </a>
         </p>
       </div>
